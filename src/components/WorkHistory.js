@@ -6,7 +6,7 @@ const WorkHistory = ({ lang, t }) => {
   const history = t.workHistory.list;
 
   return (
-    <section id="work" className="min-h-screen bg-gray-800/80 py-16 px-4">
+    <section id="work" className="min-h-screen bg-gray-800/20 py-16 px-4">
       <motion.h2
         className="text-5xl font-bold text-center mb-12"
         initial={{ opacity: 0, y: 30 }}

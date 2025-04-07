@@ -43,7 +43,7 @@ const Header = ({ onLanguageChange, t }) => {
             transition={{ duration: 0.4 }}
             className="container mx-auto flex items-center justify-between h-full px-4"
           >
-            <h1 className="text-xl font-bold text-blue-500">LopezOnchain</h1>
+            <h1 className="text-xl font-bold text-blue-500">Lopez</h1>
             <nav className="flex space-x-6">
               <a href="#about" className="hover:text-blue-400 transition text-base">
                 {t.nav.about}
@@ -69,6 +69,9 @@ const Header = ({ onLanguageChange, t }) => {
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/linkedin.png" alt="LinkedIn" className="w-6 h-6 rounded-full" />
               </a>*/}
+              <a href="https://t.me/lopezonchain" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/telegram.png" alt="Telegram" className="w-6 h-6 rounded-full object-cover"/>
+              </a>
               <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/github.png" alt="GitHub" className="w-6 h-6 rounded-full" />
               </a>
@@ -108,9 +111,11 @@ const Header = ({ onLanguageChange, t }) => {
             className="w-full h-full flex flex-col items-center justify-center text-center px-4"
           >
             <h1 className="text-6xl font-extrabold mb-6 text-blue-500">
-              LopezOnchain
+              Lopez Onchain
             </h1>
+<div>🚧 under construction 🚧 en construcción  🚧</div>
             <p className="text-2xl mb-8 text-gray-300">
+              
               {t.header.description}
             </p>
             <nav className="flex space-x-8">
@@ -133,46 +138,8 @@ const Header = ({ onLanguageChange, t }) => {
                 {t.nav.awards}
               </a>
             </nav>
+            {/* Selector de Idiomas */}
             <div className="mt-8 flex items-center space-x-4">
-              {/* Redes Sociales versión grande */}
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/linkedin.png"
-                  alt="LinkedIn"
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/github.png"
-                  alt="GitHub"
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/warpcast.png"
-                  alt="Warpcast"
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/zora.jpg"
-                  alt="Zora"
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/assets/x.jpg"
-                  alt="X"
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-              </a>
-
-              {/* Selector de Idiomas */}
-              <div className="flex space-x-2">
                 <button
                   onClick={() => handleLangChange("en")}
                   className={`px-4 py-2 border border-white hover:bg-blue-500 transition ${activeLang === "en" ? "font-bold text-blue-500" : ""
@@ -188,7 +155,52 @@ const Header = ({ onLanguageChange, t }) => {
                   ES
                 </button>
               </div>
+            <div className="mt-8 flex items-center space-x-4">
+              {/* Redes Sociales versión grande 
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/assets/linkedin.png"
+                  alt="LinkedIn"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>*/}
+              <a href="https://t.me/lopezonchain" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/assets/telegram.png"
+                  alt="Telegram"
+                  className="w-10 h-10 rounded-full object-cover"
+              />
+              </a>
+              <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/assets/github.png"
+                  alt="GitHub"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+              <a href="https://warpcast.com/lopezonchain.eth" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/assets/warpcast.png"
+                  alt="Warpcast"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+              <a href="https://zora.co/@lopezonchain" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/assets/zora.jpg"
+                  alt="Zora"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
+              <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/assets/x.jpg"
+                  alt="X"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </a>
             </div>
+            
           </motion.div>
         )}
       </motion.header>

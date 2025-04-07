@@ -6,19 +6,29 @@ import { motion } from "framer-motion";
 const BackgroundParticles = ({ count = 80 }) => {
   const [particles, setParticles] = useState([]);
 
-  useEffect(() => {
-    const generateParticles = () =>
-      Array.from({ length: count }, (_, i) => ({
-        id: i,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        size: Math.random() * 10 + 5, // Tamaño de 5 a 15px
-        color: `hsl(${Math.random() * 360}, 100%, 70%)`, // Colores aleatorios
-        blur: Math.random() * 4 + 2, // Desenfoque de 2 a 6px
-        opacity: Math.random() * 0.5 + 0.5, // Opacidad de 0.5 a 1
-      }));
+  // Función para generar las partículas usando las dimensiones actuales
+  const generateParticles = () =>
+    Array.from({ length: count }, (_, i) => ({
+      id: i,
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      size: Math.random() * 10 + 5, // Tamaño de 5 a 15px
+      color: `hsl(${Math.random() * 360}, 100%, 70%)`, // Colores aleatorios
+      blur: Math.random() * 4 + 2, // Desenfoque de 2 a 6px
+      opacity: Math.random() * 0.5 + 0.5, // Opacidad de 0.5 a 1
+    }));
 
+  useEffect(() => {
+    // Genera las partículas en el montaje inicial
     setParticles(generateParticles());
+
+    // Función para regenerar partículas al cambiar el tamaño de la ventana
+    const handleResize = () => {
+      setParticles(generateParticles());
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [count]);
 
   return (
