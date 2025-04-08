@@ -1,5 +1,3 @@
-![profile](https://github.com/user-attachments/assets/a001cb44-9514-47d0-9bc4-d921223ea9f6)
-
 # Hi, I'm Lopez! 👋
 
 A passionate onchain full-stack developer, specialized in blockchain and with a flair for digital innovation. I love crafting modern technological solutions with a creative twist, focusing on security and escalability.
