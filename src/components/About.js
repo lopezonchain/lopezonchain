@@ -11,7 +11,7 @@ const About = ({ lang, t }) => {
   return (
     <section id="about" className="min-h-screen flex items-center justify-center px-4 py-16">
       <motion.div
-        className="relative bg-gray-900/70 rounded-3xl p-10 shadow-2xl max-w-4xl mx-auto text-center"
+        className="relative bg-gray-900 rounded-3xl p-10 shadow-2xl max-w-4xl mx-auto text-center"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

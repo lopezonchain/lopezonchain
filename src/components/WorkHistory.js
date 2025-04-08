@@ -15,7 +15,7 @@ const WorkHistory = ({ lang, t }) => {
   const history = t.workHistory.list;
 
   return (
-    <section id="work" className="min-h-screen bg-gray-800/80 py-16 px-4">
+    <section id="work" className="min-h-screen bg-gray-1000/80 py-16 px-4">
       <motion.h2
         className="text-6xl font-extrabold text-center mb-12 text-blue-400"
         initial={{ opacity: 0, x: -30 }}
@@ -37,7 +37,7 @@ const WorkHistory = ({ lang, t }) => {
             viewport={{ once: true, amount: 0.5 }}
           >
             {/* Tarjeta con imagen diagonal a la derecha */}
-            <div className="md:flex relative overflow-hidden shadow-2xl rounded-3xl transform hover:scale-[1.02] transition duration-300 h-82">
+            <div className="md:flex relative overflow-hidden shadow-2xl rounded-3xl transform hover:scale-[1.02] transition duration-300 max-h-82">
               {/* Bloque de texto (lado izquierdo) */}
               <div className="md:w-2/3 relative">
                 {/* Pseudo-elemento que hace el relleno diagonal */}

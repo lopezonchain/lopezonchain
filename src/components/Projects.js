@@ -48,7 +48,7 @@ const Projects = ({ lang, t }) => {
   return (
     <section
       id="projects"
-      className="min-h-screen bg-gray-800/80 py-16 px-4 flex flex-col items-center"
+      className="min-h-screen bg-gray-1000/80 py-16 px-4 flex flex-col items-center"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -91,7 +91,7 @@ const Projects = ({ lang, t }) => {
         className="max-w-5xl w-full flex items-center justify-center min-h-[400px]"
       >
         <motion.div
-          className="relative bg-gray-900/70 p-6 md:p-8 rounded-3xl shadow-2xl"
+          className="relative bg-gray-900 p-6 md:p-8 rounded-3xl shadow-2xl"
           style={{
             transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
           }}
