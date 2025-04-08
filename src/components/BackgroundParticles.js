@@ -44,7 +44,7 @@ const BackgroundParticles = ({ count = 80 }) => {
         height: "100vh",
         overflow: "hidden",
         zIndex: -1, // Asegura que esté detrás del contenido
-        background: "linear-gradient(45deg, #0f2027, #203a43, #2c5364)", // Fondo oscuro con gradiente
+        background: "linear-gradient(45deg, #000, rgb(0,28,42))", // Fondo con gradiente desde negro a rgb(0,28,42)
       }}
     >
       {particles.map((particle) => (
@@ -81,7 +81,7 @@ const BackgroundParticles = ({ count = 80 }) => {
         />
       ))}
     </div>
-  );
+  );  
 };
 
 export default BackgroundParticles;
