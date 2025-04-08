@@ -8,24 +8,6 @@ const containerVariants = {
 };
 
 const About = ({ lang, t }) => {
-  // Texto de inspiración (puedes integrarlo a tu locales si lo deseas)
-  const title = "Hi, I'm Lopez!";
-  const description = `
-A passionate onchain full-stack developer, specialized in blockchain with a flair for digital innovation. 
-I love crafting modern technological solutions with a creative twist.
-  `;
-  const experience = `
-I've worked on challenging projects that merge conventional web technologies 
-with emerging blockchain and cybersecurity solutions.
-  `;
-  const passion = `
-I love building engaging user experiences that are visually striking and functionally robust, 
-where design and technology come together to make a difference.
-  `;
-  const goal = `
-To drive digital transformation through scalable, secure, and disruptive solutions.
-  `;
-  
   return (
     <section id="about" className="min-h-screen flex items-center justify-center px-4 py-16">
       <motion.div
@@ -35,23 +17,23 @@ To drive digital transformation through scalable, secure, and disruptive solutio
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        <h2 className="text-6xl font-extrabold text-blue-400 mb-6">{title}</h2>
-        <p className="text-xl text-gray-200 leading-relaxed mb-6">{description}</p>
+        <h2 className="text-6xl font-extrabold text-blue-400 mb-6">{t.about.title}</h2>
+        <p className="text-xl text-gray-200 leading-relaxed mb-6">{t.about.description}</p>
         <div className="space-y-4 text-left">
           <div>
             <h3 className="text-2xl font-bold text-white">Experience:</h3>
-            <p className="text-lg text-gray-300">{experience}</p>
+            <p className="text-lg text-gray-300">{t.about.experience}</p>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-white">Passion:</h3>
-            <p className="text-lg text-gray-300">{passion}</p>
+            <p className="text-lg text-gray-300">{t.about.passion}</p>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-white">Goal:</h3>
-            <p className="text-lg text-gray-300">{goal}</p>
+            <p className="text-lg text-gray-300">{t.about.goal}</p>
           </div>
         </div>
-        {/* Imagen representativa (Placeholder) */}
+        {/* Imagen representativa (puede considerarse mover a en.js si se requiere traducible) */}
         <div className="mt-8">
           <img
             src="/assets/profile.png"

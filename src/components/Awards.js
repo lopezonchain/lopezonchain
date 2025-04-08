@@ -15,8 +15,8 @@ const Awards = ({ lang, t }) => {
   const awards = t.awards.list;
 
   return (
-    <section id="awards" className="min-h-screen relative  bg-black">
-      {awards.map((award, index) => (
+    <section id="awards" className="min-h-screen relative bg-black">
+      {awards.map((award) => (
         <motion.div
           key={award.id}
           className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-900 to-pink-700 text-white p-8"
@@ -26,18 +26,19 @@ const Awards = ({ lang, t }) => {
           viewport={{ once: true, amount: 0.7 }}
         >
           <div className="max-w-3xl text-center">
-    <div className="mb-8">
-      {/* Imagen o ícono grande del premio */}
-      <a href="https://devpost.com/software/base-buddy-buddy-battles" target="_blank"><img
-        src="/assets/electroneum2025.png"
-        alt="Award"
-        className="w-full max-w-lg object-contain rounded-2xl shadow-2xl transition-transform transform hover:scale-105 mx-auto"
-      /></a>
-    </div>
-    <h3 className="text-6xl font-extrabold mb-4">{award.title}</h3>
-    <p className="text-2xl">{award.description}</p>
-    
-  </div><p className="text-2xl">It is the only one... YET!</p>
+            <div className="mb-8">
+              {/* Imagen e ícono grande del premio, con enlace */}
+              <a href={award.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={award.image}
+                  alt={award.title}
+                  className="w-full max-w-lg object-contain rounded-2xl shadow-2xl transition-transform transform hover:scale-105 mx-auto"
+                />
+              </a>
+            </div>
+            <h3 className="text-6xl font-extrabold mb-4">{award.title}</h3>
+            <p className="text-2xl">{award.description}</p>
+          </div>
         </motion.div>
       ))}
     </section>
