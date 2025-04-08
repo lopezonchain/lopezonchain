@@ -45,11 +45,46 @@ const en = {
   workHistory: {
     title: "Work History",
     list: [
-      { id: 1, role: "Blockchain developer", company: "No company", period: "February 2024 - today", location: "The Earth" },
-      { id: 2, role: "Senior full-stack developer", company: "Ohtic", period: "April 2022 - January 2024", location: "Barcelona, Spain" },
-      { id: 3, role: "Full-stack developer", company: "Softtek", period: "September 2019 - March 2022", location: "Ávila, Spain" },
-      { id: 4, role: "Web Developer", company: "Adcore Desarrollo y Comunicación SL", period: "June 2019 - September 2019", location: "Ávila, Spain" },
-      { id: 5, role: "Intern and Trainee", company: "everis", period: "February 2019 - May 2019", location: "Salamanca, Spain" }
+      { 
+        id: 1, 
+        role: "Blockchain developer", 
+        company: "No company", 
+        period: "February 2024 - today", 
+        location: "The Earth",
+        image: "/assets/profile.png"
+      },
+      { 
+        id: 2, 
+        role: "Senior full-stack developer", 
+        company: "Ohtic", 
+        period: "April 2022 - January 2024", 
+        location: "Barcelona, Spain",
+        image: "/assets/workhistory/ohtic.png"
+      },
+      { 
+        id: 3, 
+        role: "Full-stack developer", 
+        company: "Softtek", 
+        period: "September 2019 - March 2022", 
+        location: "Ávila, Spain",
+        image: "/assets/workhistory/softtek.png"
+      },
+      { 
+        id: 4, 
+        role: "Web Developer", 
+        company: "Adcore Desarrollo y Comunicación SL", 
+        period: "June 2019 - September 2019", 
+        location: "Ávila, Spain",
+        image: "/assets/workhistory/adcore.png"
+      },
+      { 
+        id: 5, 
+        role: "Intern and Trainee", 
+        company: "everis", 
+        period: "February 2019 - May 2019", 
+        location: "Salamanca, Spain",
+        image: "/assets/workhistory/everis.png"
+      }
     ]
   },
   awards: {

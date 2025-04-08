@@ -45,13 +45,49 @@ const es = {
   workHistory: {
     title: "Experiencia laboral",
     list: [
-      { id: 1, role: "Desarrollador de blockchain", company: "Sin compañía", period: "Febrero 2024 - hoy", location: "La Tierra" },
-      { id: 2, role: "Desarrollador full-stack senior", company: "Ohtic", period: "Abril 2022 - Enero 2024", location: "Barcelona, España" },
-      { id: 3, role: "Desarrollador full-stack", company: "Softtek", period: "Septiembre 2019 - Marzo 2022", location: "Ávila, España" },
-      { id: 4, role: "Desarrollador web", company: "Adcore Desarrollo y Comunicación SL", period: "Junio 2019 - Septiembre 2019", location: "Ávila, España" },
-      { id: 5, role: "Practicante y aprendiz", company: "everis", period: "Febrero 2019 - Mayo 2019", location: "Salamanca, España" }
+      { 
+        id: 1, 
+        role: "Desarrollador blockchain", 
+        company: "Sin compañía", 
+        period: "Febrero 2024 - hoy", 
+        location: "La Tierra",
+        image: "/assets/profile.png"
+      },
+      { 
+        id: 2, 
+        role: "Desarrollador full-stack senior", 
+        company: "Ohtic", 
+        period: "Abril 2022 - Enero 2024", 
+        location: "Barcelona, España",
+        image: "/assets/workhistory/ohtic.png"
+      },
+      { 
+        id: 3, 
+        role: "Desarrollador full-stack", 
+        company: "Softtek", 
+        period: "Septiembre 2019 - Marzo 2022", 
+        location: "Ávila, España",
+        image: "/assets/workhistory/softtek.png"
+      },
+      { 
+        id: 4, 
+        role: "Desarrollador web", 
+        company: "Adcore Desarrollo y Comunicación SL", 
+        period: "Junio 2019 - Septiembre 2019", 
+        location: "Ávila, España",
+        image: "/assets/workhistory/adcore.png"
+      },
+      { 
+        id: 5, 
+        role: "Practicante y aprendiz", 
+        company: "everis", 
+        period: "Febrero 2019 - Mayo 2019", 
+        location: "Salamanca, España",
+        image: "/assets/workhistory/everis.png"
+      }
     ]
   },
+  
   awards: {
     title: "Premios",
     list: [
