@@ -10,7 +10,7 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Lopez, Onchain Software Developer"
+          content="Onchain Software Developer"
         />
         <meta name="keywords" content="blockchain, developer, software"/>
         <meta name="author" content="Lopez" />
