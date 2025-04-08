@@ -15,8 +15,7 @@ const es = {
     projects: {
       title: "Proyectos",
       list: [
-        { id: 1, title: "Buddy", description: "Descripción breve del Proyecto A." },
-        { id: 2, title: "Proyecto B", description: "Descripción breve del Proyecto B." }
+        { id: 1, title: "Buddy", description: "" },
       ]
     },
     workHistory: {

@@ -15,8 +15,7 @@ const en = {
     projects: {
       title: "Projects",
       list: [
-        { id: 1, title: "Project A", description: "Brief description of Project A." },
-        { id: 2, title: "Project B", description: "Brief description of Project B." }
+        { id: 1, title: "Buddy", description: "" },
       ]
     },
     workHistory: {
