@@ -1,13 +1,13 @@
 # Hi, I'm Lopez! 👋
 
-A passionate onchain full-stack developer, specialized in blockchain and with a flair for digital innovation. I love crafting modern technological solutions with a creative twist.
+A passionate onchain full-stack developer, specialized in blockchain and with a flair for digital innovation. I love crafting modern technological solutions with a creative twist, focusing on security and escalability.
 
 ---
 
 ## 🚀 About Me
 
 - **Experience:**  
-  I've worked on challenging projects that merge conventional web technologies with emerging blockchain and cybersecurity solutions.
+  I've worked on challenging projects that merge conventional web technologies with emerging blockchain and cybersecurity solutions. More info on my [website](https://lopezonchain.xyz)
 
 - **Passion:**  
   I love building engaging user experiences that are visually striking and functionally robust, where design and technology come together to make a difference.
@@ -53,5 +53,7 @@ If you have a project in mind, a collaboration proposal, or just want to chat ab
 ---
 
 Thank you for stopping by and exploring my digital world!
+
+![lopezonchain's Streak](https://github-readme-streak-stats.herokuapp.com/?user=lopezonchain&theme=vue-dark&hide_border=true)
 
 *Last updated on: 04/08/2025*
