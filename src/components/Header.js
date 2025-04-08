@@ -40,7 +40,7 @@ const Header = ({ onLanguageChange, t }) => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 3 }}
             className="container mx-auto flex items-center justify-between h-full px-4"
           >
             <h1 className="text-xl font-bold text-blue-500">Lopez</h1>
@@ -107,7 +107,7 @@ const Header = ({ onLanguageChange, t }) => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.5 }}
             className="w-full h-full flex flex-col items-center justify-center text-center px-4"
           >
             <h1 className="text-6xl font-extrabold mb-6 text-blue-500">

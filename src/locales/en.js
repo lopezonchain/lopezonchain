@@ -32,7 +32,7 @@ const en = {
     awards: {
       title: "Awards",
       list: [
-        { id: 1, title: "Best GameFi App", description: "Electroneum hackathon" }
+        { id: 1, title: "Best GameFi App", description: "Electroneum hackathon - May 2025" }
       ]
     }
   };
