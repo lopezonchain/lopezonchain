@@ -11,7 +11,7 @@ const es = {
   about: {
     title: "Sobre mí",
     description: "Soy López, un desarrollador full-stack con experiencia en software tradicional, blockchain y seguridad.",
-    experience: "He trabajado en proyectos desafiantes que fusionan tecnologías web convencionales con soluciones emergentes de blockchain y ciberseguridad.",
+    experience: "He trabajado en proyectos desafiantes que fusionan tecnologías web convencionales con soluciones emergentes de blockchain y ciberseguridad. El último año he estado construyendo y aprendiendo en redes blockchain, incluyendo programs o contratos inteligentes personalizados, herramientas web e integraciones Unity",
     passion: "Me encanta crear experiencias de usuario envolventes que son visualmente impactantes y funcionalmente robustas, donde diseño y tecnología se unen para marcar la diferencia.",
     goal: "Impulsar la transformación digital a través de soluciones escalables, seguras y disruptivas."
   },
