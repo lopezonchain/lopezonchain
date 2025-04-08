@@ -30,9 +30,9 @@ const Projects = ({ lang, t }) => {
     setActiveIndex(index);
   };
 
-  // Handlers para el efecto tilt
+  // Handlers para el efecto tilt sobre el contenedor (no solo sobre la tarjeta)
   const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
+    const rect = e.currentTarget.getBoundingClientRect(); // se calcula en función del contenedor
     const x = e.clientX - rect.left; // posición X relativa
     const y = e.clientY - rect.top;  // posición Y relativa
     const centerX = rect.width / 2;
@@ -49,6 +49,8 @@ const Projects = ({ lang, t }) => {
     <section
       id="projects"
       className="min-h-screen bg-gray-800/80 py-16 px-4 flex flex-col items-center"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
     >
       <motion.h2
         className="text-6xl font-extrabold mb-8 text-blue-400"
@@ -84,12 +86,12 @@ const Projects = ({ lang, t }) => {
         </div>
       </div>
 
-      {/* Detalle del proyecto activo en forma de tarjeta 3D */}
-      <div className="max-w-5xl w-full flex items-center justify-center min-h-[400px]">
+      {/* Contenedor para el detalle del proyecto activo  */}
+      <div
+        className="max-w-5xl w-full flex items-center justify-center min-h-[400px]"
+      >
         <motion.div
           className="relative bg-gray-900/70 p-6 md:p-8 rounded-3xl shadow-2xl"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
           style={{
             transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
           }}
@@ -113,7 +115,7 @@ const Projects = ({ lang, t }) => {
                   />
                 </div>
 
-                {/* Contenido: título, descripción y botón (si hay) */}
+                {/* Contenido */}
                 <div className="md:w-1/2 flex flex-col items-center justify-center">
                   <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white text-center">
                     {projects[activeIndex].title}
