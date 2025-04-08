@@ -51,7 +51,7 @@ const en = {
         company: "No company", 
         period: "February 2024 - today", 
         location: "The Earth",
-        image: "/assets/profile.png"
+        image: "/assets/workhistory/now.jpg"
       },
       { 
         id: 2, 

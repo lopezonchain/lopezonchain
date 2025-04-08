@@ -51,7 +51,7 @@ const es = {
         company: "Sin compañía", 
         period: "Febrero 2024 - hoy", 
         location: "La Tierra",
-        image: "/assets/profile.png"
+        image: "/assets/workhistory/now.jpg"
       },
       { 
         id: 2, 
