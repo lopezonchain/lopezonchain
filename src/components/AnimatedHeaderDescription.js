@@ -5,7 +5,7 @@ const AnimatedHeaderDescription = ({ text }) => {
         {words.map((word, index) => (
           <span
             key={index}
-            className="inline-block transition-all duration-500 hover:text-blue-500 hover:scale-110 cursor-default mr-3"
+            className="inline-block transition-all duration-500 hover:text-blue-500 hover:scale-110 cursor-default mr-2"
           >
             {word + " "}
           </span>
