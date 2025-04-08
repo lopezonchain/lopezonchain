@@ -29,7 +29,7 @@ const es = {
       {
         id: 2,
         title: "Bulk Airdrop Tool",
-        description: "Herramienta para hacer envios masivos de tokens de forma sencilla y rápida en grupos de 500 envíos por transacción, funcionando en Base and Electroneum",
+        description: "Herramienta para hacer envios masivos de tokens de forma sencilla y rápida en grupos de 500 envíos por transacción, funcionando en Base y Electroneum",
         visitUrl: "https://airdrop.buddybattles.xyz",
         image: "/assets/bulkAirdrop.png"
       },
