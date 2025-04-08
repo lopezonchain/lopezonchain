@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 const BackgroundParticles = ({ count = 80 }) => {
   const [particles, setParticles] = useState([]);
 
-  // Función para generar las partículas usando las dimensiones actuales
-  const generateParticles = () =>
-    Array.from({ length: count }, (_, i) => ({
+  // Función que ajusta la cantidad de partículas según el ancho de la ventana:
+  const generateParticles = () => {
+    // Si el ancho es menor a 768px se reduce a la mitad la cantidad
+    const adjustedCount = window.innerWidth < 1000 ? Math.floor(count / 4) : count;
+    return Array.from({ length: adjustedCount }, (_, i) => ({
       id: i,
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
@@ -17,12 +19,13 @@ const BackgroundParticles = ({ count = 80 }) => {
       blur: Math.random() * 4 + 2, // Desenfoque de 2 a 6px
       opacity: Math.random() * 0.5 + 0.5, // Opacidad de 0.5 a 1
     }));
+  };
 
   useEffect(() => {
-    // Genera las partículas en el montaje inicial
+    // Genera las partículas al montar el componente
     setParticles(generateParticles());
 
-    // Función para regenerar partículas al cambiar el tamaño de la ventana
+    // Se actualiza el número de partículas al cambiar el tamaño de la ventana
     const handleResize = () => {
       setParticles(generateParticles());
     };
