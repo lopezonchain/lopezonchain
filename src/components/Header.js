@@ -71,8 +71,9 @@ const Header = ({ onLanguageChange, t }) => {
           transition: { duration: 0.6, ease: "easeInOut" },
         }}
         // Se elimina "overflow-hidden" para permitir la expansión completa
-        className={`fixed top-0 left-0 w-full z-50 ${
-          shrink ? "shadow-lg rounded-b-xl mx-2" : ""
+        className={`fixed top-0 left-0 w-full z-51 ${
+          shrink ? "shadow-lg rounded-xl mt-4 mx-4" : ""
+
         }`}
         style={
           shrink
@@ -319,7 +320,7 @@ const Header = ({ onLanguageChange, t }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 h-screen w-screen bg-black bg-opacity-90 flex flex-col items-center justify-center z-50 px-4"
+            className="fixed inset-0 h-screen w-screen bg-gray-800 bg-opacity-40 flex flex-col items-center justify-center z-50 px-4"
           >
             <nav className="flex flex-col space-y-6">
               <a
