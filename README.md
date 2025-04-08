@@ -1,40 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Hi, I'm Lopez! 👋
 
-## Getting Started
+A passionate onchain full-stack developer, specialized in blockchain and with a flair for digital innovation. I love crafting modern technological solutions with a creative twist.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Experience:**  
+  I've worked on challenging projects that merge conventional web technologies with emerging blockchain and cybersecurity solutions.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Passion:**  
+  I love building engaging user experiences that are visually striking and functionally robust, where design and technology come together to make a difference.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Goal:**  
+  To drive digital transformation through scalable, secure, and disruptive solutions.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Skills & Technologies
 
-## Learn More
+- **Blockchain:** Solidity Smart Contracts, Rust Programs, integrations of all kinds
+- **Frontend:** Javascript (React, Next.js, Angular...), Html, Css...
+- **Backend / Native** Javascript (Node.js, Express), Java (Spring), C#, Python  
+- **Other:** Git, Docker, Agile methodologies, UI/UX design, SQL and NoSQL Databases
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 🌐 Connect With Me
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I’d love to connect and share ideas:
 
-## Deploy on Vercel
+- [Telegram](https://t.me/lopezonchain)
+- [Warpcast](https://warpcast.com/lopezonchain.eth)
+- [X](https://x.com/lopezonchain)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 🎯 My Philosophy
+
+I believe in the power of technology to transform lives and in creativity as the driving force behind innovation. I'm always eager to learn and share, and every project is an opportunity to grow and challenge myself.
+
+---
+
+## 📫 Want to Know More?
+
+If you have a project in mind, a collaboration proposal, or just want to chat about technology, feel free to reach out. I'm always open to exciting new ideas and challenges.
+
+---
+
+> *"Innovation is born from the passion for the impossible."*
+
+---
+
+Thank you for stopping by and exploring my digital world!
+
+*Last updated on: 04/08/2025*
