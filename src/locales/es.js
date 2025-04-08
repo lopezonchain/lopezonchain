@@ -28,13 +28,20 @@ const es = {
       },
       {
         id: 2,
+        title: "Bulk Airdrop Tool",
+        description: "Herramienta para hacer envios masivos de tokens de forma sencilla y rápida en grupos de 500 envíos por transacción, funcionando en Base and Electroneum",
+        visitUrl: "https://airdrop.buddybattles.xyz",
+        image: "/assets/bulkAirdrop.png"
+      },
+      {
+        id: 3,
         title: "Trading bot",
         description: "En progreso - Un backend de microservicios y bot de telegram para permitir a cualquier intercambiar tokens de forma sencilla",
         visitUrl: "",
         image: "/assets/wip.png"
       },
       {
-        id: 3,
+        id: 4,
         title: "What will be next?",
         description: "¿Tienes alguna idea que quieras convertir en una realidad? ¡Hablemos!",
         visitUrl: "https://t.me/lopezonchain",
