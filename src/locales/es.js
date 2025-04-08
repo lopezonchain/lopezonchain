@@ -21,10 +21,24 @@ const es = {
     list: [
       {
         id: 1,
-        title: "Buddy",
-        description: "Una plataforma de batallas, sistemas de staking y airdrop...",
+        title: "ETN Buddy",
+        description: "Una plataforma de batallas que funciona con cualquier token, un sistemas de staking, una herramienta de airdrops y mucho más, en Electroneum",
         visitUrl: "https://etn.buddybattles.xyz",
         image: "/assets/buddy.png"
+      },
+      {
+        id: 2,
+        title: "Trading bot",
+        description: "En progreso - Un backend de microservicios y bot de telegram para permitir a cualquier intercambiar tokens de forma sencilla",
+        visitUrl: "",
+        image: "/assets/wip.png"
+      },
+      {
+        id: 3,
+        title: "What will be next?",
+        description: "¿Tienes alguna idea que quieras convertir en una realidad? ¡Hablemos!",
+        visitUrl: "https://t.me/lopezonchain",
+        image: "/assets/profile.png"
       }
     ]
   },
@@ -44,7 +58,7 @@ const es = {
       {
         id: 1,
         title: "Mejor App GameFi",
-        description: "Hackathon Electroneum - Mayo 2025",
+        description: "Hackathon Electroneum - Marzo 2025",
         link: "https://devpost.com/software/base-buddy-buddy-battles",
         image: "/assets/electroneum2025.png"
       }

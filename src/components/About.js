@@ -33,7 +33,7 @@ const About = ({ lang, t }) => {
             <p className="text-lg text-gray-300">{t.about.goal}</p>
           </div>
         </div>
-        {/* Imagen representativa (puede considerarse mover a en.js si se requiere traducible) */}
+        {/* Imagen representativa */}
         <div className="mt-8">
           <img
             src="/assets/profile.png"

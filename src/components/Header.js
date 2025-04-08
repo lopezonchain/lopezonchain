@@ -9,6 +9,8 @@ const Header = ({ onLanguageChange, t }) => {
   const [shrink, setShrink] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  // Estado para el efecto tilt en el header expandido
+  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
 
   const handleLangChange = (lang) => {
     setActiveLang(lang);
@@ -20,7 +22,7 @@ const Header = ({ onLanguageChange, t }) => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    // Establece inicialmente y escucha el resize
+    // Establece inicialmente y escucha el evento resize
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
@@ -35,11 +37,28 @@ const Header = ({ onLanguageChange, t }) => {
     };
   }, []);
 
-  // Ahora, independientemente del dispositivo, usamos 100vh cuando NO está shrink
+  // Calculamos la altura del header: 100vh si no se ha hecho scroll, 70px si es shrink
   const headerHeight = shrink ? "70px" : "100vh";
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
+  };
+
+  // Handlers para el efecto tilt en el header expandido
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left; // posición relativa X
+    const y = e.clientY - rect.top;  // posición relativa Y
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    // Calcula el tilt de forma proporcional (máximo 10° en cada eje)
+    const rotateX = -((y - centerY) / centerY) * 10;
+    const rotateY = ((x - centerX) / centerX) * 10;
+    setTilt({ rotateX, rotateY });
+  };
+
+  const handleMouseLeave = () => {
+    setTilt({ rotateX: 0, rotateY: 0 });
   };
 
   return (
@@ -51,7 +70,7 @@ const Header = ({ onLanguageChange, t }) => {
           height: headerHeight,
           transition: { duration: 0.6, ease: "easeInOut" },
         }}
-        // Removemos el "overflow-hidden" para que el header pueda expandirse
+        // Se elimina "overflow-hidden" para permitir la expansión completa
         className={`fixed top-0 left-0 w-full z-50 ${
           shrink ? "shadow-lg rounded-b-xl mx-2" : ""
         }`}
@@ -61,112 +80,123 @@ const Header = ({ onLanguageChange, t }) => {
             : { background: "rgba(0,0,0,0.3)" }
         }
       >
-        {/* Si no está shrink, se muestra el header expandido (100vh) con todo su contenido */}
+        {/* Header expandido (100vh) con efecto 3D en forma de tarjeta */}
         {!shrink && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             className="w-full h-full flex flex-col items-center justify-center text-center px-4"
+            style={{ perspective: "1000px" }}  // Para efecto 3D
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
           >
-            <h1 className="text-6xl font-extrabold mb-6 text-blue-500">
-              Lopez Onchain
-            </h1>
-            <div>🚧 under construction 🚧 en construcción 🚧</div>
-            <p className="text-2xl mb-8 text-gray-300">{t.header.description}</p>
-            <nav className="flex space-x-8">
-              <a href="#about" className="hover:text-blue-400 transition text-xl">
-                {t.nav.about}
-              </a>
-              <a href="#projects" className="hover:text-blue-400 transition text-xl">
-                {t.nav.projects}
-              </a>
-              <a href="#work" className="hover:text-blue-400 transition text-xl">
-                {t.nav.work}
-              </a>
-              <a href="#awards" className="hover:text-blue-400 transition text-xl">
-                {t.nav.awards}
-              </a>
-            </nav>
-            <div className="mt-8 flex items-center space-x-4">
-              <button
-                onClick={() => handleLangChange("en")}
-                className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                  activeLang === "en" ? "font-bold text-blue-500" : ""
-                }`}
-              >
-                <img src="/assets/flag-en.png" alt="English" className="w-6 h-6" />
-              </button>
-              <button
-                onClick={() => handleLangChange("es")}
-                className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                  activeLang === "es" ? "font-bold text-blue-500" : ""
-                }`}
-              >
-                <img src="/assets/flag-es.png" alt="Español" className="w-6 h-6" />
-              </button>
-            </div>
-            <div className="mt-8 flex items-center space-x-4">
-              <a
-                href="https://t.me/lopezonchain"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/telegram.png"
-                  alt="Telegram"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-              </a>
-              <a
-                href="https://github.com/lopezonchain"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/github.png"
-                  alt="GitHub"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-              </a>
-              <a
-                href="https://warpcast.com/lopezonchain.eth"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/warpcast.png"
-                  alt="Warpcast"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-              </a>
-              <a
-                href="https://zora.co/@lopezonchain"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/zora.jpg"
-                  alt="Zora"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-              </a>
-              <a
-                href="https://x.com/lopezonchain"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/assets/x.jpg"
-                  alt="X"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-              </a>
-            </div>
+            <motion.div
+              // Aplica el tilt dinámico según la posición del mouse
+              style={{
+                transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="bg-gray-800 p-8 rounded-3xl shadow-2xl"
+            >
+              <h1 className="text-6xl font-extrabold mb-6 text-blue-500">
+                Lopez Onchain
+              </h1>
+              <p className="text-2xl mb-8 text-gray-300">{t.header.description}</p>
+              <nav className="flex flex-wrap justify-center gap-4">
+                <a href="#about" className="hover:text-blue-400 transition text-xl">
+                  {t.nav.about}
+                </a>
+                <a href="#projects" className="hover:text-blue-400 transition text-xl">
+                  {t.nav.projects}
+                </a>
+                <a href="#work" className="hover:text-blue-400 transition text-xl">
+                  {t.nav.work}
+                </a>
+                <a href="#awards" className="hover:text-blue-400 transition text-xl">
+                  {t.nav.awards}
+                </a>
+              </nav>
+              <div className="mt-8 flex items-center justify-center gap-4">
+                <button
+                  onClick={() => handleLangChange("en")}
+                  className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
+                    activeLang === "en" ? "font-bold text-blue-500" : ""
+                  }`}
+                >
+                  <img src="/assets/flag-en.png" alt="English" className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={() => handleLangChange("es")}
+                  className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
+                    activeLang === "es" ? "font-bold text-blue-500" : ""
+                  }`}
+                >
+                  <img src="/assets/flag-es.png" alt="Español" className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="mt-8 flex items-center justify-center gap-4">
+                <a
+                  href="https://t.me/lopezonchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/telegram.png"
+                    alt="Telegram"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                </a>
+                <a
+                  href="https://github.com/lopezonchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/github.png"
+                    alt="GitHub"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                </a>
+                <a
+                  href="https://warpcast.com/lopezonchain.eth"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/warpcast.png"
+                    alt="Warpcast"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                </a>
+                <a
+                  href="https://zora.co/@lopezonchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/zora.jpg"
+                    alt="Zora"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                </a>
+                <a
+                  href="https://x.com/lopezonchain"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/x.jpg"
+                    alt="X"
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
         )}
 
-        {/* Cuando se hace scroll (o en móvil cuando ya se ha scrolleado) se muestra el header "shrink" */}
+        {/* Header "shrink" (70px de alto) */}
         {shrink && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -175,7 +205,6 @@ const Header = ({ onLanguageChange, t }) => {
             className="container mx-auto flex items-center justify-between h-full px-4"
           >
             <h1 className="text-xl font-bold text-blue-500">Lopez</h1>
-            {/* En móvil se muestra el botón hamburguesa */}
             {isMobile && (
               <button
                 onClick={toggleMobileMenu}
@@ -184,7 +213,6 @@ const Header = ({ onLanguageChange, t }) => {
                 {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
             )}
-            {/* En desktop (o si no es móvil) se muestran los enlaces y demás */}
             {!isMobile && (
               <>
                 <nav className="flex space-x-6">
@@ -282,7 +310,7 @@ const Header = ({ onLanguageChange, t }) => {
         )}
       </motion.header>
 
-      {/* MENÚ MÓVIL DESPLEGABLE (OVERLAY), renderizado fuera del header */}
+      {/* MENÚ MÓVIL DESPLEGABLE (OVERLAY) */}
       <AnimatePresence>
         {isMobileMenuOpen && isMobile && (
           <motion.div
@@ -323,7 +351,6 @@ const Header = ({ onLanguageChange, t }) => {
                 {t.nav.awards}
               </a>
             </nav>
-            {/* Panel de redes sociales */}
             <div className="mt-8 grid grid-cols-3 gap-4">
               <a
                 href="https://t.me/lopezonchain"
@@ -381,7 +408,6 @@ const Header = ({ onLanguageChange, t }) => {
                 />
               </a>
             </div>
-            {/* Selector de Idiomas */}
             <div className="mt-8 flex space-x-4">
               <button
                 onClick={() => {
