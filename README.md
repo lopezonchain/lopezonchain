@@ -30,7 +30,6 @@ A passionate onchain full-stack developer, specialized in blockchain and with a 
 
 I’d love to connect and share ideas:
 
-- [Telegram](https://t.me/lopezonchain)
 - [Warpcast](https://warpcast.com/lopezonchain.eth)
 - [X](https://x.com/lopezonchain)
 

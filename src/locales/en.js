@@ -44,7 +44,7 @@ const en = {
         id: 4,
         title: "What will be next?",
         description: "Do you have any project idea and want to bring it to life? lets talk about it!",
-        visitUrl: "https://t.me/lopezonchain",
+        visitUrl: "https://t.me/lopezdev",
         image: "/assets/profile.png"
       }
     ]

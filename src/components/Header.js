@@ -143,7 +143,7 @@ const Header = ({ onLanguageChange, t }) => {
               </div>
               <div className="mt-8 flex items-center justify-center gap-4">
                 <a
-                  href="https://t.me/lopezonchain"
+                  href="https://t.me/lopezdev"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -237,7 +237,7 @@ const Header = ({ onLanguageChange, t }) => {
                 </nav>
                 <div className="flex items-center space-x-4">
                   <a
-                    href="https://t.me/lopezonchain"
+                    href="https://t.me/lopezdev"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
