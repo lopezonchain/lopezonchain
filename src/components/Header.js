@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import AnimatedHeaderDescription from "./AnimatedHeaderDescription";
 import { FiMenu, FiX } from "react-icons/fi"; // Iconos para el botón hamburguesa
 
 const Header = ({ onLanguageChange, t }) => {
@@ -11,6 +12,10 @@ const Header = ({ onLanguageChange, t }) => {
   const [isMobile, setIsMobile] = useState(false);
   // Estado para el efecto tilt en el header expandido
   const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const handleLangChange = (lang) => {
     setActiveLang(lang);
@@ -103,7 +108,7 @@ const Header = ({ onLanguageChange, t }) => {
               <h1 className="text-6xl font-extrabold mb-6 text-blue-500">
                 Lopez Onchain
               </h1>
-              <p className="text-2xl mb-8 text-gray-300">{t.header.description}</p>
+              <AnimatedHeaderDescription text={t.header.description} />
               <nav className="flex flex-wrap justify-center gap-4">
                 <a href="#about" className="hover:text-blue-400 transition text-xl">
                   {t.nav.about}
@@ -205,7 +210,7 @@ const Header = ({ onLanguageChange, t }) => {
             transition={{ duration: 0.3 }}
             className="container mx-auto flex items-center justify-between h-full px-4"
           >
-            <h1 className="text-xl font-bold text-blue-500">Lopez</h1>
+            <h1 className="text-xl font-bold text-blue-500 cursor-pointer" onClick={scrollToTop}>Lopez Onchain</h1>
             {isMobile && (
               <button
                 onClick={toggleMobileMenu}

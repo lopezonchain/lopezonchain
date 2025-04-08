@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { FiArrowUpCircle } from 'react-icons/fi'; // Importamos el icono de flecha hacia arriba
 import Header from '../components/Header';
 import About from '../components/About';
 import Projects from '../components/Projects';
@@ -15,6 +16,32 @@ import es from '../locales/es';
 export default function Home() {
   const [language, setLanguage] = useState('en');
   const t = language === 'en' ? en : es;
+
+  // Función para hacer scroll suave a la parte superior
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Estado para controlar la visibilidad del botón de scroll
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Si el scroll vertical es mayor a 100px mostramos el botón
+      if (window.scrollY > 100) {
+        setShowScroll(true);
+      } else {
+        setShowScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    
+    // Limpiamos el event listener al desmontar
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="relative bg-black text-white overflow-hidden">
@@ -31,6 +58,20 @@ export default function Home() {
         <WorkHistory lang={language} t={t} />
         <Awards lang={language} t={t} />
       </motion.main>
+
+      {/* Botón de scroll hacia arriba */}
+      {showScroll && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.3 }}
+          className="fixed bottom-4 right-4 z-50 cursor-pointer"
+          onClick={scrollToTop}
+        >
+          <FiArrowUpCircle size={40} className="text-blue-500" />
+        </motion.div>
+      )}
     </div>
   );
 }
