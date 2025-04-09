@@ -14,8 +14,7 @@ export default function Document() {
         />
         <meta name="keywords" content="blockchain, developer, software"/>
         <meta name="author" content="Lopez" />
-        <meta name="fc:frame" content='{"version": "next", "imageUrl": "https://lopezonchain.xyz/assets/profile.png", "button": {"title": "🚀 Join Lopez Onchain Universe", "action": {"type": "launch_frame", "url": "https://lopezonchain.xyz", "splashBackgroundColor": "#001c2a"}}}' />
-
+        <meta name='fc:frame' content='{"version":"next","imageUrl":"https://lopezonchain.xyz/image.png","aspectRatio":"3:2","button":{"title":"🚀Join Lopez Onchain Universe🚀","action":{"type":"launch_frame","name":"Lopez Onchain Website","url":"https://lopezonchain.xyz","splashImageUrl":"https://lopezonchain.xyz/splash.png","splashBackgroundColor":"#001c2a"}}}' />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
 
