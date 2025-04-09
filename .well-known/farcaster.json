@@ -1,15 +1,17 @@
 {
-    "version": "next",
-    "imageUrl": "https://lopezonchain.xyz/assets/profile.png",
-    "aspectRatio": "3:2",
-    "button": {
-      "title": "🚀Join Lopez Onchain Universe🚀",
-      "action": {
-        "type": "launch_frame",
-        "name": "Lopez Onchain Universe",
-        "url": "https://lopezonchain.xyz",
-        "splashImageUrl": "https://lopezonchain.xyz/splash.png",
-        "splashBackgroundColor": "#001c2a"
-      }
+    "accountAssociation": {
+      "header": "eyJmaWQiOjgwMjA5MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweGM2YWU4NGZiYjFiMmQ4NDg4NWRiZmViYWJhN2Q0N2E5OTU0NjA3YjEifQ",
+      "payload": "eyJkb21haW4iOiJsb3Blem9uY2hhaW4ueHl6In0",
+      "signature": ""
+    },
+    "frame": {
+      "name": "Lopez Onchain Universe",
+      "version": "1",
+      "iconUrl": "https://lopezonchain.xyz/assets/profile.png",
+      "homeUrl": "https://lopezonchain.xyz",
+      "imageUrl": "https://lopezonchain.xyz/assets/profile.png",
+      "buttonTitle": "🚀Join Lopez Onchain Universe🚀",
+      "splashImageUrl": "https://lopezonchain.xyz/assets/profile.png",
+      "splashBackgroundColor": "#001c2a"
     }
   }
