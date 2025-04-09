@@ -6,12 +6,12 @@
     },
     "frame": {
         "version": "1",
-        "name": "Example Frame",
-        "iconUrl": "https://lopezonchain.xyz/icon.png",
+        "name": "Lopez Onchain Universe",
+        "iconUrl": "https://lopezonchain.xyz/assets/profile.png",
         "homeUrl": "https://lopezonchain.xyz",
-        "imageUrl": "https://lopezonchain.xyz/image.png",
-        "buttonTitle": "Check this out",
-        "splashImageUrl": "https://lopezonchain.xyz/splash.png",
+        "imageUrl": "https://lopezonchain.xyz/assets/profile.png",
+        "buttonTitle": "🚀Join Lopez Onchain Universe🚀",
+        "splashImageUrl": "https://lopezonchain.xyz/assets/profile.png",
         "splashBackgroundColor": "#eeccff",
         "webhookUrl": "https://lopezonchain.xyz/api/webhook"
     }
