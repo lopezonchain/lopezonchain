@@ -18,7 +18,7 @@ export default function Document() {
         <link rel="icon" href="/favicon.ico" />
 
         {/* Icono para dispositivos Apple 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />*/}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>*/}
 
         {/* Manifest para Progressive Web App 
         <link rel="manifest" href="/site.webmanifest" />*/}
