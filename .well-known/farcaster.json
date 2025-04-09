@@ -7,11 +7,12 @@
     "frame": {
       "name": "Lopez Onchain Universe",
       "version": "1",
-      "iconUrl": "https://lopezonchain.xyz/assets/profile.png",
+      "iconUrl": "https://lopezonchain.xyz/icon.png",
       "homeUrl": "https://lopezonchain.xyz",
-      "imageUrl": "https://lopezonchain.xyz/assets/profile.png",
+      "imageUrl": "https://lopezonchain.xyz/image.png",
       "buttonTitle": "🚀Join Lopez Onchain Universe🚀",
       "splashImageUrl": "https://lopezonchain.xyz/assets/profile.png",
-      "splashBackgroundColor": "#001c2a"
+      "splashBackgroundColor": "#001c2a",
+      "webhookUrl": "https://lopezonchain.xyz/api/webhook"
     }
   }
