@@ -14,6 +14,7 @@ export default function Document() {
         />
         <meta name="keywords" content="blockchain, developer, software"/>
         <meta name="author" content="Lopez" />
+        <meta name="fc:frame" content='{"version": "next", "imageUrl": "https://lopezonchain.xyz/assets/profile.png", "button": {"title": "🚀 Join Lopez Onchain Universe", "action": {"type": "launch_frame", "url": "https://lopezonchain.xyz", "splashBackgroundColor": "#001c2a"}}}' />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
