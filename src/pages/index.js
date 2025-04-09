@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import WorkHistory from '../components/WorkHistory';
 import Awards from '../components/Awards';
 import BackgroundParticles from '../components/BackgroundParticles';
+import { sdk } from '@farcaster/frame-sdk'
 
 import en from '../locales/en';
 import es from '../locales/es';
@@ -16,6 +17,13 @@ import es from '../locales/es';
 export default function Home() {
   const [language, setLanguage] = useState('en');
   const t = language === 'en' ? en : es;
+
+  // Llamada al sdk.actions.ready() en useEffect para ejecutarse una vez que el componente está montado
+  useEffect(() => {
+    (async () => {
+      await sdk.actions.ready({ disableNativeGestures: true });
+    })();
+  }, []);
 
   // Función para hacer scroll suave a la parte superior
   const scrollToTop = () => {

@@ -64,7 +64,7 @@ const Projects = ({ lang, t }) => {
 
       {/* Carrusel de miniaturas */}
       <div className="max-w-5xl w-full mb-8">
-        <div className="flex overflow-x-auto space-x-4 pb-4">
+        <div className="flex items-center overflow-x-auto space-x-4 pb-4">
           {projects.map((project, index) => (
             <div
               key={project.id}
