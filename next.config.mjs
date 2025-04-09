@@ -1,7 +1,8 @@
-import withTM from 'next-transpile-modules';
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 };
 
-export default withTM(['@farcaster/frame-sdk'])(nextConfig);
+const withTM = require('next-transpile-modules')(['@farcaster/frame-sdk']);
+
+module.exports = withTM(nextConfig);
