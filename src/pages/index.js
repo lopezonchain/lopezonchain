@@ -20,9 +20,9 @@ export default function Home() {
 
   // Llamada al sdk.actions.ready() en useEffect para ejecutarse una vez que el componente está montado
   useEffect(() => {
-    (async () => {
-      await sdk.actions.ready({ disableNativeGestures: true });
-    })();
+    import('@farcaster/frame-sdk').then(({ sdk }) => {
+      sdk.actions.ready({ disableNativeGestures: true });
+    });
   }, []);
 
   // Función para hacer scroll suave a la parte superior

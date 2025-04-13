@@ -21,27 +21,34 @@ const es = {
     list: [
       {
         id: 1,
+        title: "WarpBoard",
+        description: "Tablón de mensajes con algunas mecánicas de contribuciones y recompensas. Miniapp de Warpcast, también accesible en navegador con Metamask. ",
+        visitUrl: "https://warpboard.lopezonchain.xyz",
+        image: "/assets/warpBoard.png"
+      },
+      {
+        id: 2,
         title: "ETN Buddy",
         description: "Una plataforma de batallas que funciona con cualquier token, un sistemas de staking, una herramienta de airdrops y mucho más, en Electroneum",
         visitUrl: "https://etn.buddybattles.xyz",
         image: "/assets/buddy.png"
       },
       {
-        id: 2,
+        id: 3,
         title: "Bulk Airdrop Tool",
         description: "Herramienta para hacer envios masivos de tokens de forma sencilla y rápida en grupos de 500 envíos por transacción, funcionando en Base y Electroneum",
         visitUrl: "https://airdrop.buddybattles.xyz",
         image: "/assets/bulkAirdrop.png"
       },
       {
-        id: 3,
+        id: 4,
         title: "Trading bot",
         description: "En progreso - Un backend de microservicios y bot de telegram para permitir a cualquier intercambiar tokens de forma sencilla",
         visitUrl: "",
         image: "/assets/wip.png"
       },
       {
-        id: 4,
+        id: 5,
         title: "What will be next?",
         description: "¿Tienes alguna idea que quieras convertir en una realidad? ¡Hablemos!",
         visitUrl: "https://t.me/lopezdev",
