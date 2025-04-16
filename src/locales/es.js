@@ -11,8 +11,13 @@ const es = {
   about: {
     title: "Sobre mí",
     description: "Soy López, un desarrollador full-stack con experiencia en software tradicional, blockchain y seguridad.",
-    experience: "He trabajado en proyectos desafiantes que fusionan tecnologías web convencionales con soluciones emergentes de blockchain y ciberseguridad. El último año he estado construyendo y aprendiendo en redes blockchain, incluyendo programs o contratos inteligentes personalizados, herramientas web e integraciones Unity",
-    passion: "Me encanta crear experiencias de usuario envolventes que son visualmente impactantes y funcionalmente robustas, donde diseño y tecnología se unen para marcar la diferencia.",
+    experience_title:"Experiencia:",
+    experience: "He trabajado en proyectos desafiantes que fusionan tecnologías web convencionales con soluciones emergentes de blockchain y ciberseguridad. El último año he estado construyendo y aprendiendo en redes blockchain, incluyendo programs y contratos inteligentes personalizados, herramientas web e integraciones Unity",
+    tech_title:"Tecnologías más usadas:",
+    tech: "Lenguajes y frameworks\n Solidity, Rust, Javascript (Node, React, Next, Express), Java (Spring, Android), C#/C++ (Unity, Android)\n Bases de datos\n NoSQL (Mongo, GraphSQL), SQL (PostgreSQL, MySQL, Oracle)\n Sistemas\n Linux, Android, Windows ",
+    passion_title:"Pasión:",
+    passion: "Me apasiona crear experiencias de usuario envolventes, visualmente impactantes y funcionalmente robustas, donde diseño y tecnología se unen para marcar la diferencia.",
+    goal_title:"Objetivo:",
     goal: "Impulsar la transformación digital a través de soluciones escalables, seguras y disruptivas."
   },
   projects: {
@@ -93,7 +98,7 @@ const es = {
       },
       { 
         id: 5, 
-        role: "Practicante y aprendiz", 
+        role: "Prácticas", 
         company: "everis", 
         period: "Febrero 2019 - Mayo 2019", 
         location: "Salamanca, España",
