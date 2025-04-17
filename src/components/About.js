@@ -14,8 +14,8 @@ const About = ({ lang, t }) => {
         className="relative bg-gray-900 rounded-3xl p-10 shadow-2xl max-w-4xl mx-auto text-center"
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
+        animate="visible"
+        transition={{ delay: 0.3 }}
       >
         <h2 className="text-6xl font-extrabold text-blue-400 mb-6">{t.about_title}</h2>
         <p className="text-xl text-gray-200 leading-relaxed mb-6">{t.about.description}</p>
