@@ -90,7 +90,6 @@ const Projects = ({ lang, t }) => {
         href={projects[activeIndex].visitUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors"
       >
         <div
           className="max-w-5xl w-full flex items-center justify-center min-h-[400px]"
