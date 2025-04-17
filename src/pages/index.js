@@ -57,8 +57,8 @@ export default function Home() {
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="pt-[100vh] overflow-hidden relative z-10"
+        transition={{ duration: 0.5 }}
+        className="pt-[100vh] overflow-x-hidden relative z-10"
       >
         <BackgroundParticles />
         <About lang={language} t={t} />

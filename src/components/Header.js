@@ -75,7 +75,6 @@ const Header = ({ onLanguageChange, t }) => {
           height: headerHeight,
           transition: { duration: 0.6, ease: "easeInOut" },
         }}
-        // Se elimina "overflow-hidden" para permitir la expansión completa
         className={`fixed top-0 left-0 w-full z-51 ${
           shrink ? "shadow-lg rounded-xl mt-4 mx-4" : ""
 
