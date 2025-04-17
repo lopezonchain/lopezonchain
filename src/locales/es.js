@@ -14,7 +14,7 @@ const es = {
     experience_title:"Experiencia:",
     experience: "He trabajado en proyectos desafiantes que fusionan tecnologías web convencionales con soluciones emergentes de blockchain y ciberseguridad. El último año he estado construyendo y aprendiendo en redes blockchain, incluyendo programs y contratos inteligentes personalizados, herramientas web e integraciones Unity",
     tech_title:"Tecnologías más usadas:",
-    tech: "Lenguajes y frameworks\n Solidity, Rust, Javascript (Node, React, Next, Express), Java (Spring, Android), C#/C++ (Unity, Android)\n Bases de datos\n NoSQL (Mongo, GraphSQL), SQL (PostgreSQL, MySQL, Oracle)\n Sistemas\n Linux, Android, Windows ",
+    tech: "Principalmente he trabajado con esto, aunque siempre estoy aprendiendo y he utilizado muchas más tecnologías. Lenguajes y frameworks\n Solidity, Rust, Javascript (Node, React, Next, Express), Java (Spring, Android), C#/C++ (Unity, Android)\n Bases de datos\n NoSQL (Mongo, GraphSQL), SQL (PostgreSQL, MySQL, Oracle)\n Sistemas\n Linux, Android, Windows ",
     passion_title:"Pasión:",
     passion: "Me apasiona crear experiencias de usuario envolventes, visualmente impactantes y funcionalmente robustas, donde diseño y tecnología se unen para marcar la diferencia.",
     goal_title:"Objetivo:",
