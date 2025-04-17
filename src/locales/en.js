@@ -14,7 +14,7 @@ const en = {
     experience_title:"Experiencie:",
     experience: "I've worked on challenging projects that merge conventional web technologies with emerging blockchain and cybersecurity solutions. Last year all-in onchain, I've been learning and developing a lot over blockchain networks, including custom smart contracts/programs, web tools and Unity integrations",
     tech_title:"Tech Stack:",
-    tech: "Languages & frameworks\n Solidity, Rust, Javascript (Node, React, Next, Express), Java (Spring, Android), C#/C++ (Unity, Android)\n Databases\n NoSQL (Mongo, GraphSQL), SQL (PostgreSQL, MySQL, Oracle)\n Systems\n Linux, Android, Windows",
+    tech: "I’ve primarily worked with these, though I’m constantly picking up new skills and have tried out a wide range of languages and technologies\nLanguages & frameworks\n Solidity, Rust, Javascript (Node, React, Next, Express), Java (Spring, Android), C#/C++ (Unity, Android)\n Databases\n NoSQL (Mongo, GraphSQL), SQL (PostgreSQL, MySQL, Oracle)\n Systems\n Linux, Android, Windows",
     passion_title:"Passion:",
     passion: "I love building engaging user experiences that are visually striking and functionally robust, where design and technology come together to make a difference.",
     goal_title:"Goal:",
