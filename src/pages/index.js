@@ -52,7 +52,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative bg-black text-white overflow-hidden">
+    <div className="relative bg-black text-white overflow-x-hidden">
       <Header onLanguageChange={setLanguage} t={t} />
       <motion.main
         initial={{ opacity: 0 }}
