@@ -91,7 +91,7 @@ const es = {
       { 
         id: 4, 
         role: "Desarrollador web", 
-        company: "Adcore Desarrollo y Comunicación SL", 
+        company: "Adcore", 
         period: "Junio 2019 - Septiembre 2019", 
         location: "Ávila, España",
         image: "/assets/workhistory/adcore.png"
