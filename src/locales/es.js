@@ -113,7 +113,7 @@ const es = {
       {
         id: 1,
         title: "Mejor App GameFi",
-        description: "Hackathon Electroneum - Marzo 2025",
+        description: "Electroneum Hackathon - Marzo 2025",
         link: "https://devpost.com/software/base-buddy-buddy-battles",
         image: "/assets/electroneum2025.png"
       }
