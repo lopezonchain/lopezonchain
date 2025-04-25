@@ -26,10 +26,10 @@ const es = {
     list: [
       {
         id: 1,
-        title: "WarpBoard",
-        description: "Tablón de mensajes con algunas mecánicas de contribuciones y recompensas. Miniapp de Warpcast, también accesible en navegador con Metamask. ",
-        visitUrl: "https://warpboard.lopezonchain.xyz",
-        image: "/assets/warpBoard.png"
+        title: "WarpPay",
+        description: "Envía o pide tokens en diferentes redes EVM (trabajando en más funciones). Miniapp Warpcast y Coinbase, también accesible en navegador.",
+        visitUrl: "https://warppay.lopezonchain.xyz",
+        image: "/assets/warpPay.png"
       },
       {
         id: 2,
@@ -47,13 +47,20 @@ const es = {
       },
       {
         id: 4,
+        title: "WarpBoard",
+        description: "Tablón de mensajes con algunas mecánicas de contribuciones y recompensas. Miniapp de Warpcast, también accesible en navegador con Metamask. ",
+        visitUrl: "https://warpboard.lopezonchain.xyz",
+        image: "/assets/warpBoard.png"
+      },
+      {
+        id: 5,
         title: "Trading bot",
         description: "En progreso - Un backend de microservicios y bot de telegram para permitir a cualquier intercambiar tokens de forma sencilla",
         visitUrl: "",
         image: "/assets/wip.png"
       },
       {
-        id: 5,
+        id: 6,
         title: "What will be next?",
         description: "¿Tienes alguna idea que quieras convertir en una realidad? ¡Hablemos!",
         visitUrl: "https://t.me/lopezdev",

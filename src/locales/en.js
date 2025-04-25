@@ -26,10 +26,10 @@ const en = {
     list: [
       {
         id: 1,
-        title: "WarpBoard",
-        description: "Message board with some contribution and reward mechanics. Warpcast Miniapp, also accesible from Desktop with Metamask. ",
-        visitUrl: "https://warpboard.lopezonchain.xyz",
-        image: "/assets/warpBoard.png"
+        title: "WarpPay",
+        description: "Send / Require tokens over different EVM networks 100% free (working in more utility). Warpcast and Coinbase Miniapp, also accesible from Desktop.",
+        visitUrl: "https://warppay.lopezonchain.xyz",
+        image: "/assets/warpPay.png"
       },
       {
         id: 2,
@@ -47,13 +47,20 @@ const en = {
       },
       {
         id: 4,
+        title: "WarpBoard",
+        description: "Message board with some contribution and reward mechanics. Warpcast Miniapp, also accesible from Desktop with Metamask. ",
+        visitUrl: "https://warpboard.lopezonchain.xyz",
+        image: "/assets/warpBoard.png"
+      },
+      {
+        id: 5,
         title: "Trading bot",
         description: "Work In Progress - A microservices backend and tg bot for allowing anyone trading seamlessly",
         visitUrl: "",
         image: "/assets/wip.png"
       },
       {
-        id: 5,
+        id: 6,
         title: "What will be next?",
         description: "Do you have any project idea and want to bring it to life? lets talk about it!",
         visitUrl: "https://t.me/lopezdev",
