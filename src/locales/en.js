@@ -27,7 +27,7 @@ const en = {
       {
         id: 1,
         title: "WarpPay",
-        description: "Send / Require tokens over different EVM networks 100% free (working in more utility). Warpcast and Coinbase Miniapp, also accesible from Desktop.",
+        description: "All-in-one payments miniapp. Easily send, create request links, airdrop or schedule payments. Farcaster and Coinbase feeds integration, also accesible from Desktop.",
         visitUrl: "https://warppay.lopezonchain.xyz",
         image: "/assets/warpPay.png"
       },
@@ -48,7 +48,7 @@ const en = {
       {
         id: 4,
         title: "WarpBoard",
-        description: "Message board with some contribution and reward mechanics. Warpcast Miniapp, also accesible from Desktop with Metamask. ",
+        description: "Message board with some contribution and reward mechanics. Farcaster Miniapp, also accesible from Desktop with Metamask. ",
         visitUrl: "https://warpboard.lopezonchain.xyz",
         image: "/assets/warpBoard.png"
       },
