@@ -26,24 +26,24 @@ A passionate onchain full-stack developer, specialized in blockchain and with a 
 
 ---
 
-## 🌐 Connect With Me
-
-I’d love to connect and share ideas:
-
-- [Warpcast](https://warpcast.com/lopezonchain.eth)
-- [X](https://x.com/lopezonchain)
-
----
-
 ## 🎯 My Philosophy
 
 I believe in the power of technology to transform lives and in creativity as the driving force behind innovation. I'm always eager to learn and share, and every project is an opportunity to grow and challenge myself.
 
 ---
 
-## 📫 Want to Know More?
+## 📫 Want to Know More Or talk about something?
 
 If you have a project in mind, a collaboration proposal, or just want to chat about technology, feel free to reach out. I'm always open to exciting new ideas and challenges.
+
+---
+
+## 🌐 Connect With Me
+
+I’d love to connect and share ideas:
+
+- [Warpcast](https://warpcast.com/lopezonchain.eth)
+- [X](https://x.com/lopezonchain)
 
 ---
 
