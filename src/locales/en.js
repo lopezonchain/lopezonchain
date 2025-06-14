@@ -33,34 +33,41 @@ const en = {
       },
       {
         id: 2,
+        title: "PingGate",
+        description: "Chat based Marketplace. Farcaster and Coinbase feeds integration, also accesible from Desktop.",
+        visitUrl: "https://pinggate.lopezonchain.xyz",
+        image: "/assets/pingGate.png"
+      },
+      {
+        id: 3,
         title: "ETN Buddy",
         description: "A platform of battles that works with any token, a staking system and much more, in Electroneum",
         visitUrl: "https://etn.buddybattles.xyz",
         image: "/assets/buddy.png"
       },
       {
-        id: 3,
+        id: 4,
         title: "Bulk Airdrop Tool",
         description: "Tool for doing ERC-20 token airdrops to multiple wallets in batches of 500 sends per tx, working on Base and Electroneum",
         visitUrl: "https://airdrop.buddybattles.xyz",
         image: "/assets/bulkAirdrop.png"
       },
       {
-        id: 4,
+        id: 5,
         title: "WarpBoard",
         description: "Message board with some contribution and reward mechanics. Farcaster Miniapp, also accesible from Desktop with Metamask. ",
         visitUrl: "https://warpboard.lopezonchain.xyz",
         image: "/assets/warpBoard.png"
       },
       {
-        id: 5,
+        id: 6,
         title: "Trading bot",
         description: "Work In Progress - A microservices backend and tg bot for allowing anyone trading seamlessly",
         visitUrl: "",
         image: "/assets/wip.png"
       },
       {
-        id: 6,
+        id: 7,
         title: "What will be next?",
         description: "Do you have any project idea and want to bring it to life? lets talk about it!",
         visitUrl: "https://t.me/lopezdev",
