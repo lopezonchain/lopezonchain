@@ -18,7 +18,6 @@ export default function Home() {
   const [language, setLanguage] = useState('en');
   const t = language === 'en' ? en : es;
 
-  // Llamada al sdk.actions.ready() en useEffect para ejecutarse una vez que el componente está montado
   useEffect(() => {
     import('@farcaster/frame-sdk').then(({ sdk }) => {
       sdk.actions.ready({ disableNativeGestures: true });
