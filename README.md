@@ -53,6 +53,6 @@ I’d love to connect and share ideas:
 
 Thank you for stopping by and exploring my digital world!
 
-[![GitHub Streak]([https://streak-stats.demolab.com?user=lopezonchain&theme=dark&hide_border=true&short_numbers=true](https://camo.githubusercontent.com/f0b9ab98e975369ec7f0e2145839c004c88bf9c94af2b3b9919cf7537c1d6d02/68747470733a2f2f73747265616b2d73746174732e64656d6f6c61622e636f6d3f757365723d6c6f70657a6f6e636861696e267468656d653d6461726b26686964655f626f726465723d747275652673686f72745f6e756d626572733d74727565))]([https://git.io/streak-stats](https://streak-stats.demolab.com?user=lopezonchain&theme=dark&hide_border=true&short_numbers=true))
+![GitHub Streak](https://streak-stats.demolab.com?user=lopezonchain&theme=dark&hide_border=true&short_numbers=true)
 
 *Last updated on: 04/08/2025*
