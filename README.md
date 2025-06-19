@@ -53,6 +53,6 @@ I’d love to connect and share ideas:
 
 Thank you for stopping by and exploring my digital world!
 
-![lopezonchain's Streak](https://github-readme-streak-stats.herokuapp.com/?user=lopezonchain&theme=vue-dark&hide_border=true)
+![lopezonchain's Streak](https://streak-stats.demolab.com?user=lopezonchain&theme=vue-dark&hide_border=true)
 
 *Last updated on: 04/08/2025*
