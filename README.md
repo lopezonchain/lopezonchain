@@ -53,6 +53,6 @@ I’d love to connect and share ideas:
 
 Thank you for stopping by and exploring my digital world!
 
-![lopezonchain's Streak](https://streak-stats.demolab.com?user=lopezonchain&theme=vue-dark&hide_border=true)
+[![My GitHub Streak](https://streak-stats.demolab.com?user=lopezonchain&theme=dark&hide_border=true&short_numbers=true)](https://git.io/streak-stats)
 
 *Last updated on: 04/08/2025*
