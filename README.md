@@ -52,7 +52,6 @@ I’d love to connect and share ideas:
 ---
 
 Thank you for stopping by and exploring my digital world!
-
-![GitHub Streak](https://streak-stats.demolab.com?user=lopezonchain&theme=dark&hide_border=true&short_numbers=true)
+![GitHub Streak](https://streak-stats.vercel.app/?user=lopezonchain&theme=dark&hide_border=true&short_numbers=true)
 
 *Last updated on: 04/08/2025*
