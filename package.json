@@ -12,7 +12,7 @@
   "dependencies": {
     "@farcaster/frame-sdk": "^0.0.34",
     "framer-motion": "^12.6.3",
-    "next": "15.2.4",
+    "next": "15.2.6",
     "next-transpile-modules": "^10.0.1",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0"
@@ -21,7 +21,7 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "15.2.6",
     "tailwindcss": "^4"
   }
 }
