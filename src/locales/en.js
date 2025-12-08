@@ -44,13 +44,6 @@ const en = {
         description: "Chat based Marketplace. Farcaster and Coinbase feeds integration, also accesible from Desktop.",
         visitUrl: "https://pinggate.lopezonchain.xyz",
         image: "/assets/pingGate.png"
-      },
-      {
-        id: 4,
-        title: "WarpBoard",
-        description: "Message board with some contribution and reward mechanics. Farcaster Miniapp, also accesible from Desktop with Metamask. ",
-        visitUrl: "https://warpboard.lopezonchain.xyz",
-        image: "/assets/warpBoard.png"
       }
     ]
   },
@@ -59,14 +52,22 @@ const en = {
     list: [
       {
         id: 1,
-        role: "Blockchain developer",
+        role: "Lead developer",
+        company: "Indexy",
+        period: "July 2025 - today",
+        location: "Onchain",
+        image: "/assets/workhistory/indexy.png"
+      },
+      {
+        id: 2,
+        role: "Web3 developer",
         company: "No company",
         period: "February 2024 - today",
         location: "The Earth",
         image: "/assets/workhistory/now.jpg"
       },
       {
-        id: 2,
+        id: 3,
         role: "Senior full-stack developer",
         company: "Ohtic",
         period: "April 2022 - January 2024",
@@ -74,7 +75,7 @@ const en = {
         image: "/assets/workhistory/ohtic.png"
       },
       {
-        id: 3,
+        id: 4,
         role: "Full-stack developer",
         company: "Softtek",
         period: "September 2019 - March 2022",
@@ -82,7 +83,7 @@ const en = {
         image: "/assets/workhistory/softtek.png"
       },
       {
-        id: 4,
+        id: 5,
         role: "Web Developer",
         company: "Adcore",
         period: "June 2019 - September 2019",
@@ -90,7 +91,7 @@ const en = {
         image: "/assets/workhistory/adcore.png"
       },
       {
-        id: 5,
+        id: 6,
         role: "Intern and Trainee",
         company: "everis",
         period: "February 2019 - May 2019",

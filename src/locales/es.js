@@ -27,7 +27,7 @@ const es = {
       {
         id: 1,
         title: "What will be next?",
-        description: "¿Tienes alguna idea que quieras convertir en una realidad? ¡Hablemos!",
+        description: "¿Tienes alguna idea que quieras convertir en una realidad? ¡Contacta conmigo!",
         visitUrl: "https://t.me/lopezdev",
         image: "/assets/profile.png"
       },
@@ -41,16 +41,9 @@ const es = {
       {
         id: 3,
         title: "PingGate",
-        description: "Chat web3 y marketplace. Integración en los feeds de Farcaster y Coinbase, soportando también escritorio.",
+        description: "Chat web3 y marketplace. Integración en los feeds de Farcaster y Coinbase, soportando también navegador de escritorio.",
         visitUrl: "https://pinggate.lopezonchain.xyz",
         image: "/assets/pingGate.png"
-      },
-      {
-        id: 4,
-        title: "WarpBoard",
-        description: "Tablón de mensajes con algunas mecánicas de contribuciones y recompensas. Miniapp de Farcaster, también accesible en navegador con Metamask. ",
-        visitUrl: "https://warpboard.lopezonchain.xyz",
-        image: "/assets/warpBoard.png"
       }
     ]
   },
@@ -59,14 +52,22 @@ const es = {
     list: [
       {
         id: 1,
-        role: "Desarrollador blockchain",
+        role: "Lead developer",
+        company: "Indexy",
+        period: "July 2025 - today",
+        location: "Onchain",
+        image: "/assets/workhistory/indexy.png"
+      },
+      {
+        id: 2,
+        role: "Desarrollador web3",
         company: "Sin compañía",
         period: "Febrero 2024 - hoy",
         location: "La Tierra",
         image: "/assets/workhistory/now.jpg"
       },
       {
-        id: 2,
+        id: 3,
         role: "Desarrollador full-stack senior",
         company: "Ohtic",
         period: "Abril 2022 - Enero 2024",
@@ -74,7 +75,7 @@ const es = {
         image: "/assets/workhistory/ohtic.png"
       },
       {
-        id: 3,
+        id: 4,
         role: "Desarrollador full-stack",
         company: "Softtek",
         period: "Septiembre 2019 - Marzo 2022",
@@ -82,7 +83,7 @@ const es = {
         image: "/assets/workhistory/softtek.png"
       },
       {
-        id: 4,
+        id: 5,
         role: "Desarrollador web",
         company: "Adcore",
         period: "Junio 2019 - Septiembre 2019",

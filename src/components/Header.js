@@ -75,10 +75,9 @@ const Header = ({ onLanguageChange, t }) => {
           height: headerHeight,
           transition: { duration: 0.6, ease: "easeInOut" },
         }}
-        className={`fixed top-0 left-0 w-full z-51 ${
-          shrink ? "shadow-lg rounded-xl mt-4 mx-4" : ""
+        className={`fixed top-0 left-0 w-full z-51 ${shrink ? "shadow-lg rounded-xl mt-4 mx-4" : ""
 
-        }`}
+          }`}
         style={
           shrink
             ? { backgroundColor: "rgba(0,0,0,0.5)", backdropFilter: "blur(10px)" }
@@ -125,17 +124,15 @@ const Header = ({ onLanguageChange, t }) => {
               <div className="mt-8 flex items-center justify-center gap-4">
                 <button
                   onClick={() => handleLangChange("en")}
-                  className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                    activeLang === "en" ? "font-bold text-blue-500" : ""
-                  }`}
+                  className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${activeLang === "en" ? "font-bold text-blue-500" : ""
+                    }`}
                 >
                   <img src="/assets/flag-en.png" alt="English" className="w-6 h-6" />
                 </button>
                 <button
                   onClick={() => handleLangChange("es")}
-                  className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                    activeLang === "es" ? "font-bold text-blue-500" : ""
-                  }`}
+                  className={`px-4 py-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${activeLang === "es" ? "font-bold text-blue-500" : ""
+                    }`}
                 >
                   <img src="/assets/flag-es.png" alt="Español" className="w-6 h-6" />
                 </button>
@@ -164,13 +161,13 @@ const Header = ({ onLanguageChange, t }) => {
                   />
                 </a>
                 <a
-                  href="https://warpcast.com/lopezonchain.eth"
+                  href="https://farcaster.xyz/lopezonchain.eth"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img
                     src="/assets/warpcast.png"
-                    alt="Warpcast"
+                    alt="Farcaster"
                     className="w-10 h-10 rounded-full object-cover"
                   />
                 </a>
@@ -258,13 +255,13 @@ const Header = ({ onLanguageChange, t }) => {
                     />
                   </a>
                   <a
-                    href="https://warpcast.com/lopezonchain.eth"
+                    href="https://farcaster.xyz/lopezonchain.eth"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img
                       src="/assets/warpcast.png"
-                      alt="Warpcast"
+                      alt="Farcaster"
                       className="w-6 h-6 rounded-full"
                     />
                   </a>
@@ -293,17 +290,15 @@ const Header = ({ onLanguageChange, t }) => {
                   <div className="flex space-x-2">
                     <button
                       onClick={() => handleLangChange("en")}
-                      className={`p-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                        activeLang === "en" ? "font-bold text-blue-500" : ""
-                      }`}
+                      className={`p-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${activeLang === "en" ? "font-bold text-blue-500" : ""
+                        }`}
                     >
                       <img src="/assets/flag-en.png" alt="English" className="w-6 h-6" />
                     </button>
                     <button
                       onClick={() => handleLangChange("es")}
-                      className={`p-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                        activeLang === "es" ? "font-bold text-blue-500" : ""
-                      }`}
+                      className={`p-2 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${activeLang === "es" ? "font-bold text-blue-500" : ""
+                        }`}
                     >
                       <img src="/assets/flag-es.png" alt="Español" className="w-6 h-6" />
                     </button>
@@ -380,13 +375,13 @@ const Header = ({ onLanguageChange, t }) => {
                 />
               </a>
               <a
-                href="https://warpcast.com/lopezonchain.eth"
+                href="https://farcaster.xyz/lopezonchain.eth"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img
                   src="/assets/warpcast.png"
-                  alt="Warpcast"
+                  alt="Farcaster"
                   className="w-8 h-8 rounded-full"
                 />
               </a>
@@ -419,9 +414,8 @@ const Header = ({ onLanguageChange, t }) => {
                   handleLangChange("en");
                   toggleMobileMenu();
                 }}
-                className={`p-3 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                  activeLang === "en" ? "font-bold text-blue-500" : ""
-                }`}
+                className={`p-3 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${activeLang === "en" ? "font-bold text-blue-500" : ""
+                  }`}
               >
                 <img src="/assets/flag-en.png" alt="English" className="w-8 h-8" />
               </button>
@@ -430,9 +424,8 @@ const Header = ({ onLanguageChange, t }) => {
                   handleLangChange("es");
                   toggleMobileMenu();
                 }}
-                className={`p-3 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${
-                  activeLang === "es" ? "font-bold text-blue-500" : ""
-                }`}
+                className={`p-3 border border-white rounded transition hover:bg-blue-500 cursor-pointer ${activeLang === "es" ? "font-bold text-blue-500" : ""
+                  }`}
               >
                 <img src="/assets/flag-es.png" alt="Español" className="w-8 h-8" />
               </button>
