@@ -66,18 +66,26 @@ export default function Home() {
         <Awards lang={language} t={t} />
       </motion.main>
 
-      {/* Botón de scroll hacia arriba */}
+      {/* Botón de scroll hacia arriba mejorado */}
       {showScroll && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3 }}
-          className="fixed bottom-4 right-4 z-50 cursor-pointer"
+        <motion.button
+          initial={{ opacity: 0, scale: 0, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0, y: 20 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="fixed bottom-8 right-8 z-[90] cursor-pointer group"
           onClick={scrollToTop}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
-          <FiArrowUpCircle size={40} className="text-blue-500" />
-        </motion.div>
+          {/* Fondo con brillo */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-300"></div>
+          
+          {/* Botón */}
+          <div className="relative glass p-4 rounded-full bg-gradient-to-r from-cyan-500 to-teal-500 shadow-2xl">
+            <FiArrowUpCircle size={28} className="text-white" />
+          </div>
+        </motion.button>
       )}
     </div>
   );

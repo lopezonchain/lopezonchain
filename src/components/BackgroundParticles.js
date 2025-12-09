@@ -1,38 +1,52 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
-const BackgroundParticles = ({ count = 80 }) => {
+const BackgroundParticles = ({ count = 60 }) => {
   const [particles, setParticles] = useState([]);
 
-  // Función que ajusta la cantidad de partículas según el ancho de la ventana:
+  // Paleta de colores cyan/teal tech
+  const colorPalette = useMemo(() => [
+    'rgba(6, 182, 212, 0.6)',    // Cyan
+    'rgba(20, 184, 166, 0.6)',   // Teal
+    'rgba(14, 165, 233, 0.6)',   // Sky Blue
+    'rgba(34, 211, 238, 0.6)',   // Light Cyan
+    'rgba(56, 189, 248, 0.6)',   // Blue
+    'rgba(99, 102, 241, 0.6)',   // Indigo accent
+  ], []);
+
   const generateParticles = () => {
-    // Si el ancho es menor a 768px se reduce a la mitad la cantidad
-    const adjustedCount = window.innerWidth < 1000 ? Math.floor(count / 4) : count;
-    return Array.from({ length: adjustedCount }, (_, i) => ({
-      id: i,
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
-      size: Math.random() * 10 + 5, // Tamaño de 5 a 15px
-      color: `hsl(${Math.random() * 360}, 100%, 70%)`, // Colores aleatorios
-      blur: Math.random() * 4 + 2, // Desenfoque de 2 a 6px
-      opacity: Math.random() * 0.5 + 0.5, // Opacidad de 0.5 a 1
-    }));
+    const adjustedCount = window.innerWidth < 1000 ? Math.floor(count / 3) : count;
+    return Array.from({ length: adjustedCount }, (_, i) => {
+      const particleType = Math.random();
+      return {
+        id: i,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        size: particleType > 0.7 ? Math.random() * 8 + 12 : Math.random() * 6 + 3,
+        color: colorPalette[Math.floor(Math.random() * colorPalette.length)],
+        blur: particleType > 0.7 ? Math.random() * 6 + 4 : Math.random() * 3 + 1,
+        opacity: Math.random() * 0.4 + 0.3,
+        duration: Math.random() * 15 + 10,
+        type: particleType > 0.8 ? 'star' : 'circle',
+      };
+    });
   };
 
   useEffect(() => {
-    // Genera las partículas al montar el componente
     setParticles(generateParticles());
 
-    // Se actualiza el número de partículas al cambiar el tamaño de la ventana
     const handleResize = () => {
       setParticles(generateParticles());
     };
 
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [count]);
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [count, colorPalette]);
 
   return (
     <div
@@ -43,43 +57,99 @@ const BackgroundParticles = ({ count = 80 }) => {
         width: "100vw",
         height: "100vh",
         overflow: "hidden",
-        zIndex: -1, // Asegura que esté detrás del contenido
-        background: "linear-gradient(45deg, #000, rgb(0,28,42))", // Fondo con gradiente desde negro a rgb(0,28,42)
+        zIndex: -1,
+        background: "radial-gradient(ellipse at top, rgba(10, 10, 30, 1) 0%, rgba(0, 0, 0, 1) 100%)",
       }}
     >
-      {particles.map((particle) => (
-        <motion.div
-          key={particle.id}
-          initial={{
-            x: particle.x,
-            y: particle.y,
-            opacity: particle.opacity,
-            scale: 1,
-          }}
-          animate={{
-            x: particle.x + Math.sin(particle.id) * 50 - 25, // Movimiento ondulado
-            y: particle.y + Math.cos(particle.id) * 50 - 25,
-            opacity: Math.random() * 0.5 + 0.5, // Cambio de opacidad
-            scale: Math.random() * 1.5 + 0.5, // Cambio de escala
-            rotate: Math.random() * 360, // Rotación
-          }}
-          transition={{
-            duration: Math.random() * 6 + 4, // Duración aleatoria
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          style={{
-            position: "absolute",
-            width: `${particle.size}px`,
-            height: `${particle.size}px`,
-            backgroundColor: particle.color,
-            borderRadius: "50%",
-            filter: `blur(${particle.blur}px)`,
-            pointerEvents: "none",
-            boxShadow: `0 0 ${particle.blur * 2}px ${particle.color}`, // Efecto de brillo
-          }}
-        />
-      ))}
+      {/* Gradientes de fondo animados */}
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          background: "radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.08) 0%, transparent 50%)",
+        }}
+        animate={{
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+      <motion.div
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          background: "radial-gradient(circle at 80% 70%, rgba(245, 87, 108, 0.08) 0%, transparent 50%)",
+        }}
+        animate={{
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+      />
+
+      {/* Partículas flotantes */}
+      {particles.map((particle) => {
+        return (
+          <motion.div
+            key={particle.id}
+            initial={{
+              x: particle.x,
+              y: particle.y,
+              opacity: particle.opacity,
+              scale: 1,
+            }}
+            animate={{
+              x: [
+                particle.x,
+                particle.x + Math.sin(particle.id * 0.5) * 80,
+                particle.x,
+              ],
+              y: [
+                particle.y,
+                particle.y + Math.cos(particle.id * 0.5) * 80,
+                particle.y,
+              ],
+              opacity: [particle.opacity, particle.opacity * 1.5, particle.opacity],
+              scale: [1, 1.2],
+              rotate: particle.type === 'star' ? 360 : 0,
+            }}
+            transition={{
+              duration: particle.duration,
+              repeat: Infinity,
+              ease: "easeInOut",
+              rotate: particle.type === 'star' ? { duration: particle.duration, repeat: Infinity, ease: "linear" } : {},
+            }}
+            style={{
+              position: "absolute",
+              width: `${particle.size}px`,
+              height: `${particle.size}px`,
+              background: particle.type === 'star' 
+                ? `linear-gradient(45deg, ${particle.color}, rgba(255, 255, 255, 0.8))`
+                : particle.color,
+              borderRadius: particle.type === 'star' ? '30%' : '50%',
+              filter: `blur(${particle.blur}px)`,
+              pointerEvents: "none",
+              boxShadow: `0 0 ${particle.blur * 3}px ${particle.color}, 0 0 ${particle.blur * 6}px ${particle.color}`,
+              willChange: "transform, opacity",
+            }}
+          />
+        );
+      })}
+
+      {/* Efecto de viñeta sutil */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%)",
+          pointerEvents: "none",
+        }}
+      />
     </div>
   );  
 };
