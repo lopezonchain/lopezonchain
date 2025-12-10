@@ -28,15 +28,31 @@ const Header = ({ onLanguageChange, t }) => {
     const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
-      const offsetTop = targetElement.offsetTop;
-      // Si el header está shrink (pequeño), necesitamos restar su altura
-      // Si el header está expandido, el contenido ya tiene pt-[100vh] así que solo un pequeño offset
-      const offset = shrink ? 80 : 20;
-      
-      window.scrollTo({
-        top: offsetTop - offset,
-        behavior: 'smooth'
-      });
+      // Si el header está expandido, primero hacemos scroll para contraerlo
+      // y luego navegamos a la sección objetivo
+      if (!shrink) {
+        // Primero scrolleamos lo suficiente para contraer el header
+        window.scrollTo({
+          top: 150,
+          behavior: 'smooth'
+        });
+        
+        // Esperamos a que el header se contraiga y luego navegamos a la sección
+        setTimeout(() => {
+          const offsetTop = targetElement.offsetTop;
+          window.scrollTo({
+            top: offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }, 600); // Esperamos la duración de la animación del header
+      } else {
+        // Si el header ya está contraído, navegamos directamente
+        const offsetTop = targetElement.offsetTop;
+        window.scrollTo({
+          top: offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
