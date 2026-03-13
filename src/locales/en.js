@@ -3,10 +3,10 @@ const en = {
     description: "Blockchain & AI Agent Developer. Full-stack Web3, MCP integrations & agentic systems.",
     stats: [
       { value: "7+", label: "Years Dev" },
-      { value: "AI", label: "& Agents" },
+      { value: "AI", label: "& Software" },
       { value: "⛓", label: "Blockchain" },
       { value: "</>", label: "Full-Stack" },
-      { value: "🏗", label: "Architecture" }
+      { value: "🏗", label: "Solutions" }
     ]
   },
   nav: {
