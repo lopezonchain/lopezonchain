@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef } from "react";
 
 const awardVariants = {
   hidden: { opacity: 0, scale: 0.9, y: 50 },
@@ -16,6 +16,15 @@ const awardVariants = {
 const Awards = ({ lang, t }) => {
   const awards = t.awards.list;
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [showEmpty, setShowEmpty] = useState(false);
+  const emptyRef = useRef(null);
+
+  const handleArrowClick = () => {
+    setShowEmpty(true);
+    setTimeout(() => {
+      emptyRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+  };
 
   return (
     <section id="awards" className="min-h-screen relative bg-black overflow-hidden">
@@ -174,20 +183,60 @@ const Awards = ({ lang, t }) => {
             </motion.div>
           </div>
 
-          {/* Scroll indicator (solo en el primer award) */}
-          {index === 0 && (
-            <motion.div
-              className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-              animate={{ y: [0, 10, 0] }}
+          {/* Flecha clickable (solo en el último award) */}
+          {index === awards.length - 1 && !showEmpty && (
+            <motion.button
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 cursor-pointer group"
+              animate={{ y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+              onClick={handleArrowClick}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <svg className="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              <svg className="w-8 h-8 text-white/50 group-hover:text-cyan-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </motion.div>
+            </motion.button>
           )}
         </motion.div>
       ))}
+
+      {/* Sección vacía - aparece al pulsar la flecha */}
+      <AnimatePresence>
+        {showEmpty && (
+          <motion.div
+            ref={emptyRef}
+            className="min-h-[60vh] flex flex-col items-center justify-center relative overflow-hidden px-8"
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-black to-teal-900/10 pointer-events-none" />
+            <motion.div
+              className="glass p-10 rounded-3xl text-center max-w-lg relative z-10 border border-white/10"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+            >
+              <motion.div
+                className="text-6xl mb-6"
+                animate={{ rotate: [0, -10, 10, -10, 0] }}
+                transition={{ duration: 1.2, delay: 0.4 }}
+              >
+                🏗️
+              </motion.div>
+              <h3 className="text-3xl font-extrabold mb-3 gradient-text bg-gradient-to-r from-cyan-400 to-teal-400">
+                {lang === "es" ? "En construcción..." : "Under construction..."}
+              </h3>
+              <p className="text-gray-400 text-lg leading-relaxed">
+                {lang === "es"
+                  ? "De momento no hay más premios aquí, pero estoy trabajando en ello 👀"
+                  : "No more awards here yet, but I'm working on it 👀"}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import WorkHistory from '../components/WorkHistory';
 import Awards from '../components/Awards';
 import BackgroundParticles from '../components/BackgroundParticles';
+import ScrollGlowEffect from '../components/ScrollGlowEffect';
 import { sdk } from '@farcaster/frame-sdk'
 
 import en from '../locales/en';
@@ -60,6 +61,7 @@ export default function Home() {
         className="pt-[100vh] overflow-x-hidden relative z-10"
       >
         <BackgroundParticles />
+        <ScrollGlowEffect />
         <About lang={language} t={t} />
         <Projects lang={language} t={t} />
         <WorkHistory lang={language} t={t} />

@@ -151,7 +151,7 @@ const Projects = ({ lang, t }) => {
                 </div>
 
                 {/* Contenido */}
-                <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+                <div className="md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left min-h-[260px] justify-between">
                   <motion.h3 
                     className="text-4xl md:text-5xl font-bold mb-6 gradient-text bg-gradient-to-r from-cyan-400 to-teal-400"
                     initial={{ x: -20 }}

@@ -190,9 +190,49 @@ const Header = ({ onLanguageChange, t }) => {
                   ))}
                 </motion.nav>
 
-                {/* Botones de idioma modernos */}
-                <motion.div 
-                  className="mt-10 flex items-center justify-center gap-4"
+                {/* Stats badges */}
+                {(() => {
+                  const stats = t.header.stats || [];
+                  const rows = [];
+                  for (let i = 0; i < stats.length; i += 3) rows.push(stats.slice(i, i + 3));
+                  return (
+                    <motion.div
+                      className="mt-8 flex flex-col items-center gap-3"
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.75, duration: 0.8 }}
+                    >
+                      {rows.map((row, rowIdx) => (
+                        <div key={rowIdx} className="flex justify-center gap-3">
+                          {row.map((stat, i) => {
+                            const globalIdx = rowIdx * 3 + i;
+                            return (
+                              <motion.div
+                                key={globalIdx}
+                                className="glass px-5 py-2.5 rounded-full flex items-center gap-2 border border-cyan-500/20 hover:border-cyan-500/50 transition-colors duration-300"
+                                whileHover={{ scale: 1.08, y: -2 }}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.8 + globalIdx * 0.1, duration: 0.4 }}
+                              >
+                                <span className="text-base font-extrabold gradient-text bg-gradient-to-r from-cyan-400 to-teal-400">
+                                  {stat.value}
+                                </span>
+                                <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">
+                                  {stat.label}
+                                </span>
+                              </motion.div>
+                            );
+                          })}
+                        </div>
+                      ))}
+                    </motion.div>
+                  );
+                })()}
+
+                {/* Language buttons */}
+                <motion.div
+                  className="mt-8 flex items-center justify-center gap-4"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.9, duration: 0.8 }}
@@ -217,12 +257,12 @@ const Header = ({ onLanguageChange, t }) => {
                   ))}
                 </motion.div>
 
-                {/* Iconos sociales mejorados */}
-                <motion.div 
-                  className="mt-10 flex items-center justify-center gap-5"
+                {/* Social icons */}
+                <motion.div
+                  className="mt-8 flex items-center justify-center gap-5"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 1.1, duration: 0.8 }}
+                  transition={{ delay: 1.2, duration: 0.8 }}
                 >
                   {[
                     { href: "https://t.me/lopezdev", icon: "telegram", label: "Telegram" },
