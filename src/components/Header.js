@@ -197,28 +197,28 @@ const Header = ({ onLanguageChange, t }) => {
                   for (let i = 0; i < stats.length; i += 3) rows.push(stats.slice(i, i + 3));
                   return (
                     <motion.div
-                      className="mt-8 flex flex-col items-center gap-3"
+                      className="mt-8 flex flex-col items-center gap-2"
                       initial={{ y: 20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.75, duration: 0.8 }}
                     >
                       {rows.map((row, rowIdx) => (
-                        <div key={rowIdx} className="flex justify-center gap-3">
+                        <div key={rowIdx} className="flex flex-wrap justify-center gap-2 w-full px-4 max-w-sm mx-auto">
                           {row.map((stat, i) => {
                             const globalIdx = rowIdx * 3 + i;
                             return (
                               <motion.div
                                 key={globalIdx}
-                                className="glass px-5 py-2.5 rounded-full flex items-center gap-2 border border-cyan-500/20 hover:border-cyan-500/50 transition-colors duration-300"
+                                className="glass px-3 py-1.5 md:px-5 md:py-2.5 rounded-full flex items-center gap-1.5 border border-cyan-500/20 hover:border-cyan-500/50 transition-colors duration-300"
                                 whileHover={{ scale: 1.08, y: -2 }}
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: 0.8 + globalIdx * 0.1, duration: 0.4 }}
                               >
-                                <span className="text-base font-extrabold gradient-text bg-gradient-to-r from-cyan-400 to-teal-400">
+                                <span className="text-sm md:text-base font-extrabold gradient-text bg-gradient-to-r from-cyan-400 to-teal-400">
                                   {stat.value}
                                 </span>
-                                <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">
+                                <span className="text-[10px] md:text-xs text-gray-400 font-medium uppercase tracking-wider">
                                   {stat.label}
                                 </span>
                               </motion.div>

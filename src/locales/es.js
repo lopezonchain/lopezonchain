@@ -57,8 +57,8 @@ const es = {
     list: [
       {
         id: 1,
-        title: "Indexy (Desarrollador)",
-        description: "Plataforma de índices cripto con datos en tiempo real, Agent API, servidor MCP para Claude AI, mini-app de Farcaster en Base, sistema de concursos automatizado y autenticación con Base smart wallets via Privy.",
+        title: "Indexy",
+        description: "Desarrollador jefe. Plataforma de índices cripto con datos en tiempo real, Agent API, servidor MCP para Claude AI, mini-app de Farcaster en Base, sistema de concursos automatizado y autenticación con Base smart wallets via Privy.",
         visitUrl: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png"
       },
