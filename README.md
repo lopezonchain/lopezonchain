@@ -54,10 +54,7 @@ Full-stack developer with 7+ years of experience. Lately deep into **blockchain*
 
 ---
 
-## 📫 Connect
-
-[![Farcaster](https://img.shields.io/badge/Farcaster-8A63D2?style=for-the-badge&logo=farcaster&logoColor=white)](https://farcaster.xyz/lopezonchain.eth)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/lopezonchain)
+## 📫 Connect / Website
 [![Website](https://img.shields.io/badge/lopezonchain.xyz-06B6D4?style=for-the-badge&logo=globe&logoColor=white)](https://lopezonchain.xyz)
 
 ---
