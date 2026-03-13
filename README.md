@@ -48,10 +48,9 @@ Full-stack developer with 7+ years of experience. Lately deep into **blockchain*
 
 | Project | Description |
 |---|---|
-| [**Indexy**](https://indexy.xyz) | Crypto index platform — Agent API, MCP server, Farcaster miniapp on Base, smart wallet auth |
+| [**Indexy**](https://indexy.xyz) | Crypto index platform, Agent API, MCP server, Farcaster/Baseapp miniapp |
 | [**WarpPay**](https://warppay.lopezonchain.xyz) | All-in-one payments miniapp for Farcaster and Coinbase feeds |
 | [**PingGate**](https://pinggate.lopezonchain.xyz) | Web3 chat marketplace integrated in Farcaster and Coinbase feeds |
-| [**Buddy Battles**](https://devpost.com/software/base-buddy-buddy-battles) | 🏆 Best GameFi — Electroneum Hackathon 2025 |
 
 ---
 
