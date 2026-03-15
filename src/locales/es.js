@@ -91,7 +91,7 @@ const es = {
       {
         id: 1,
         featured: true,
-        role: "Desarrollador Freelance",
+        role: "Desarrollador Jefe",
         company: "Indexy",
         period: "Julio 2025 – Presente",
         location: "Remoto",
@@ -104,11 +104,12 @@ const es = {
           "Servidor MCP que permite a Claude AI y otros LLMs interactuar con Indexy",
           "Miniapp de Farcaster y Base app con integración en el ecosistema y notificaciones sociales",
           "Base smart wallets via Privy con soporte de email, Farcaster y wallet",
-          "Rutinas automáticas de actualización de índices con datos de mercado y rendimiento",
+          "Rutinas automáticas de actualización de datos",
           "Sistema de concursos con puntuación BPS, leaderboards y reparto de premios",
           "Microservicio de imágenes OG para previsualizaciones sociales de alto rendimiento y autogeneradas",
           "Analíticas multi-timeframe, seguimiento de sesiones y caché de KPIs para el dashboard",
-          "Gestión de agentes IA e implementación de tareas automatizadas"
+          "Gestión de agentes IA y tareas automatizadas",
+          "Contratos inteligentes, implementación de trading con terceros"
         ],
         tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "MCP", "Farcaster", "Base", "Privy", "Smart Wallets", "Agent API"]
       },
