@@ -49,8 +49,8 @@ Full-stack developer with 7+ years of experience. Lately deep into **blockchain*
 | Project | Description |
 |---|---|
 | [**Indexy**](https://indexy.xyz) | (Software lead) Crypto index platform, Agent API, MCP server, Farcaster/Baseapp miniapp |
-| [**WarpPay**](https://warppay.lopezonchain.xyz) | (POC Creator) All-in-one payments miniapp for Farcaster and Coinbase feeds |
-| [**PingGate**](https://pinggate.lopezonchain.xyz) | (POC Creator) Web3 chat marketplace integrated in Farcaster and Coinbase feeds |
+| [**WarpPay**](https://warppay.lopezonchain.xyz) | (POC Creator) All-in-one payments miniapp for Farcaster |
+| [**PingGate**](https://pinggate.lopezonchain.xyz) | (POC Creator) Web3 chat marketplace integrated in Farcaster feed |
 
 ---
 
