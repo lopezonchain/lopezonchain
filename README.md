@@ -32,8 +32,8 @@ Full-stack developer with 7+ years of experience. Lately deep into **blockchain*
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
 **Frontend**
 
@@ -48,9 +48,9 @@ Full-stack developer with 7+ years of experience. Lately deep into **blockchain*
 
 | Project | Description |
 |---|---|
-| [**Indexy**](https://indexy.xyz) | Crypto index platform, Agent API, MCP server, Farcaster/Baseapp miniapp |
-| [**WarpPay**](https://warppay.lopezonchain.xyz) | All-in-one payments miniapp for Farcaster and Coinbase feeds |
-| [**PingGate**](https://pinggate.lopezonchain.xyz) | Web3 chat marketplace integrated in Farcaster and Coinbase feeds |
+| [**Indexy**](https://indexy.xyz) | (Software lead) Crypto index platform, Agent API, MCP server, Farcaster/Baseapp miniapp |
+| [**WarpPay**](https://warppay.lopezonchain.xyz) | (POC Creator) All-in-one payments miniapp for Farcaster and Coinbase feeds |
+| [**PingGate**](https://pinggate.lopezonchain.xyz) | (POC Creator) Web3 chat marketplace integrated in Farcaster and Coinbase feeds |
 
 ---
 
