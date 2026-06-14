@@ -1,6 +1,6 @@
 # Hey, I'm Lopez 👋
 
-Full-stack developer with 7+ years of experience. Lately deep into **blockchain**, **AI agents**, **IoT** and **Web3**, building everything from smart contracts to complete platforms with agent and MCP integrations.
+Full-stack developer with 7+ years of experience. Lately deep into **blockchain**, **AI agents**, **IoT** and **Web3**, building everything from smart contracts to complete platforms with agents and MCP integrations.
 
 ---
 
