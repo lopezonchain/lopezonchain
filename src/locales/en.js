@@ -53,31 +53,38 @@ const en = {
   },
   projects: {
     title: "Projects",
-    visitButtonText: "Go to website",
+    visitButtonText: "Go to",
     list: [
       {
         id: 1,
+        title: "Plazr (POC)",
+        description: "Real events platform, with QR tickets, assistance verification and much more",
+        visitUrl: "https://plazr-ui.vercel.app/",
+        image: "/assets/workhistory/indexy.png"
+      },
+      {
+        id: 2,
         title: "Indexy",
         description: "Freelance & Lead developer. Crypto index tracking platform. Real-time market data, Agent API, MCP server for Claude AI, Farcaster mini-app on Base, automated contest system, and Base smart wallet auth via Privy.",
         visitUrl: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png"
       },
       {
-        id: 2,
-        title: "WarpPay",
+        id: 3,
+        title: "WarpPay (POC)",
         description: "All-in-one payments mini-app. Send, create request links, airdrop or schedule payments. Integrated into Farcaster and Coinbase feeds, also accessible from Desktop.",
         visitUrl: "https://warppay.lopezonchain.xyz",
         image: "/assets/warpPay.png"
       },
       {
-        id: 3,
-        title: "PingGate",
+        id: 4,
+        title: "PingGate (POC)",
         description: "Chat-based Web3 Marketplace. Farcaster and Coinbase feeds integration, also accessible from Desktop.",
         visitUrl: "https://pinggate.lopezonchain.xyz",
         image: "/assets/pingGate.png"
       },
       {
-        id: 4,
+        id: 5,
         title: "What will be next?",
         description: "Do you have a project idea and want to bring it to life? Let's talk!",
         visitUrl: "https://t.me/lopezdev",
@@ -91,9 +98,25 @@ const en = {
       {
         id: 1,
         featured: true,
-        role: "Lead Developer",
+        role: "Independent Software Architect",
+        company: "Freelance",
+        period: "February 2024 – Present",
+        location: "Remote",
+        image: "/assets/workhistory/now.jpg",
+        description: "Building across the Web3 ecosystem. Farcaster mini-apps, payment tools, marketplace platforms, and onchain games on Base.",
+        highlights: [
+          "WarpPay: all-in-one payments mini-app for Farcaster on Base",
+          "PingGate: Web3 chat marketplace in Farcaster and Coinbase feeds",
+          "Buddy Battles: GameFi app, winner of Best GameFi at Electroneum Hackathon 2025",
+          "Multiple onchain smart contracts deployed on Base"
+        ],
+        tags: ["Solidity", "Farcaster", "React", "Base", "Web3", "EVM", "GameFi"]
+      },
+      {
+        id: 2,
+        role: "Lead Arquitect & Developer",
         company: "Indexy",
-        period: "July 2025 – Present",
+        period: "July 2025 – June 2026",
         location: "Remote",
         url: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png",
@@ -112,22 +135,6 @@ const en = {
           "Smart contracts, trading implementations"
         ],
         tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "MCP", "Farcaster", "Base", "Privy", "Smart Wallets", "Agent API"]
-      },
-      {
-        id: 2,
-        role: "Independent Web3 Developer",
-        company: "Freelance",
-        period: "February 2024 – Present",
-        location: "Remote",
-        image: "/assets/workhistory/now.jpg",
-        description: "Building across the Web3 ecosystem. Farcaster mini-apps, payment tools, marketplace platforms, and onchain games on Base.",
-        highlights: [
-          "WarpPay: all-in-one payments mini-app for Farcaster on Base",
-          "PingGate: Web3 chat marketplace in Farcaster and Coinbase feeds",
-          "Buddy Battles: GameFi app, winner of Best GameFi at Electroneum Hackathon 2025",
-          "Multiple onchain smart contracts deployed on Base"
-        ],
-        tags: ["Solidity", "Farcaster", "React", "Base", "Web3", "EVM", "GameFi"]
       },
       {
         id: 3,

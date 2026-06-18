@@ -53,31 +53,38 @@ const es = {
   },
   projects: {
     title: "Proyectos",
-    visitButtonText: "Visitar web",
+    visitButtonText: "Visitar",
     list: [
       {
         id: 1,
+        title: "Plazr (POC)",
+        description: "plataforma de eventos reales, con tickets QR, verificación de asistencia y mucho más",
+        visitUrl: "https://plazr-ui.vercel.app/",
+        image: "/assets/workhistory/indexy.png"
+      },
+      {
+        id: 2,
         title: "Indexy",
         description: "Desarrollador jefe. Plataforma de índices cripto con datos en tiempo real, Agent API, servidor MCP para Claude AI, mini-app de Farcaster en Base, sistema de concursos automatizado y autenticación con Base smart wallets via Privy.",
         visitUrl: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png"
       },
       {
-        id: 2,
-        title: "WarpPay",
+        id: 3,
+        title: "WarpPay (POC)",
         description: "Mini-app de pagos todo en uno. Envía, crea links de solicitud, multi-envíos y pagos programados. Integrada en los feeds de Farcaster y Coinbase, soportando también escritorio.",
         visitUrl: "https://warppay.lopezonchain.xyz",
         image: "/assets/warpPay.png"
       },
       {
-        id: 3,
-        title: "PingGate",
+        id: 4,
+        title: "PingGate (POC)",
         description: "Marketplace Web3 basado en chat. Integración en los feeds de Farcaster y Coinbase, soportando también escritorio.",
         visitUrl: "https://pinggate.lopezonchain.xyz",
         image: "/assets/pingGate.png"
       },
       {
-        id: 4,
+        id: 5,
         title: "¿Qué será lo siguiente?",
         description: "¿Tienes alguna idea que quieras convertir en realidad? Hablemos.",
         visitUrl: "https://t.me/lopezdev",
