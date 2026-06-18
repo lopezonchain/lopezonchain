@@ -60,7 +60,7 @@ const en = {
         title: "Plazr (POC)",
         description: "Real events platform, with QR tickets, assistance verification and much more",
         visitUrl: "https://plazr-ui.vercel.app/",
-        image: "/assets/workhistory/indexy.png"
+        image: "/assets/workhistory/Plazr.svg"
       },
       {
         id: 2,
