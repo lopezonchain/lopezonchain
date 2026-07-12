@@ -24,7 +24,7 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />*/}
 
         {/* Otros metadatos opcionales */}
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#080907" />
       </Head>
       <body className="antialiased">
         <Main />

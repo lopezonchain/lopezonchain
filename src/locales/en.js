@@ -114,7 +114,7 @@ const en = {
       },
       {
         id: 2,
-        role: "Lead Arquitect & Developer",
+        role: "Lead Architect & Developer",
         company: "Indexy",
         period: "July 2025 – June 2026",
         location: "Remote",
