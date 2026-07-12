@@ -1,6 +1,6 @@
 const es = {
   header: {
-    description: "Desarrollador de software y blockchain. Web3 full-stack, integraciones MCP y sistemas agénticos.",
+    description: "Arquitecto de software especializado en productos full-stack, infraestructura blockchain y sistemas de agentes de IA. Tecnología compleja, construida con criterio y preparada para producción.",
     stats: [
       { value: "7+", label: "Años de experiencia" },
       { value: "AI", label: "& Software" },
@@ -18,7 +18,7 @@ const es = {
   about: {
     description: "Soy López, desarrollador full-stack con varios años de experiencia en software tradicional, blockchain y seguridad. Los últimos años he estado metido de lleno en Web3, construyendo desde contratos inteligentes hasta plataformas completas con integración de agentes IA.",
     experience_title: "Experiencia",
-    experience: "He trabajado en proyectos que mezclan web tradicional con blockchain e IA. Últimamente me he centrado en Web3: mini-apps para Farcaster, APIs para agentes, servidores MCP y rutinas onchain automatizadas. También tengo bastante experiencia en software empresarial y ciberseguridad.",
+    experience: "He construido productos que combinan software tradicional, infraestructura blockchain e inteligencia artificial: plataformas full-stack, APIs para agentes, servidores MCP, contratos inteligentes y automatizaciones distribuidas. También cuento con una sólida experiencia en software empresarial, arquitectura y ciberseguridad.",
     tech_title: "Tech Stack",
     tech: "Lenguajes\nSolidity, Rust, TypeScript, JavaScript, Java, C#\n\nFrameworks\nReact, Next.js, Node.js, Express, Spring, Unity\n\nBlockchain & AI\nEVM, Base, Solana, Farcaster, Privy, Base Smart Wallets, IA, Agentes\n\nBases de datos\nPostgreSQL, MongoDB, MySQL, Oracle",
     passion_title: "Pasión",
@@ -127,7 +127,7 @@ const es = {
         period: "Febrero 2024 – Presente",
         location: "Remoto",
         image: "/assets/workhistory/now.jpg",
-        description: "Construyendo en el ecosistema Web3 de forma independiente. Mini-apps para Farcaster, herramientas de pago, marketplaces y juegos onchain en Base.",
+        description: "Desarrollo independiente de productos blockchain: mini-apps para Farcaster, herramientas de pago, marketplaces y juegos basados en contratos inteligentes sobre Base.",
         highlights: [
           "WarpPay: mini-app de pagos todo en uno para Farcaster en Base",
           "PingGate: marketplace Web3 basado en chat en Farcaster y Coinbase feeds",

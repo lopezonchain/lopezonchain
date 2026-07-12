@@ -24,6 +24,11 @@ const Projects = ({ lang, t }) => {
       </div>
 
       <div className="project-stage">
+        <div className="project-stage__chrome">
+          <span className="window-dots"><i /><i /><i /></span>
+          <span>/LOPEZ.OS/WORK/{active.title.replace(/\s+/g, "_").toUpperCase()}</span>
+          <span><i className="live-pixel" /> LIVE RENDER</span>
+        </div>
         <div className="project-stage__visual">
           <AnimatePresence mode="wait">
             <motion.div
@@ -37,6 +42,11 @@ const Projects = ({ lang, t }) => {
               <span className="project-index">0{activeIndex + 1}</span>
               <img src={active.image} alt={active.title} width="700" height="700" />
               <div className="project-image-wrap__badge">CASE/{String(activeIndex + 1).padStart(2, "0")}</div>
+              <div className="project-telemetry" aria-hidden="true">
+                <span>RENDER STATUS <b>100%</b></span>
+                <i /><i /><i /><i /><i /><i /><i /><i />
+                <small>0x{String(active.id).padStart(4, "0")}AFE</small>
+              </div>
             </motion.div>
           </AnimatePresence>
         </div>

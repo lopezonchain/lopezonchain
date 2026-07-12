@@ -9,6 +9,7 @@ import Projects from "../components/Projects";
 import WorkHistory from "../components/WorkHistory";
 import Awards from "../components/Awards";
 import BackgroundParticles from "../components/BackgroundParticles";
+import InterfaceLayer from "../components/InterfaceLayer";
 import en from "../locales/en";
 import es from "../locales/es";
 
@@ -27,6 +28,7 @@ export default function Home() {
   return (
     <div className="site-shell">
       <BackgroundParticles />
+      <InterfaceLayer lang={language} />
       <Header onLanguageChange={setLanguage} t={t} />
       <main>
         <About lang={language} t={t} />

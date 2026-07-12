@@ -1,7 +1,7 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowDownRight, FiGithub, FiMenu, FiSend, FiX } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
@@ -17,6 +17,7 @@ const Header = ({ onLanguageChange, t }) => {
   const [language, setLanguage] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const heroRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -41,14 +42,20 @@ const Header = ({ onLanguageChange, t }) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const trackPointer = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    event.currentTarget.style.setProperty("--pointer-x", `${((event.clientX - rect.left) / rect.width - 0.5) * 2}`);
+    event.currentTarget.style.setProperty("--pointer-y", `${((event.clientY - rect.top) / rect.height - 0.5) * 2}`);
+  };
+
   return (
     <>
       <header
         className={`site-nav ${scrolled ? "site-nav--scrolled" : ""}`}
       >
-        <a className="brand-mark" href="#top" onClick={(e) => goTo(e, "#top")} aria-label="Lopez Onchain — home">
+        <a className="brand-mark" href="#top" onClick={(e) => goTo(e, "#top")} aria-label="Lopez — home">
           <span className="brand-glyph">L/</span>
-          <span className="brand-name">LOPEZ<span>ONCHAIN</span></span>
+          <span className="brand-name">LOPEZ<span>SOFTWARE ARCHITECT</span></span>
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
@@ -60,6 +67,11 @@ const Header = ({ onLanguageChange, t }) => {
         </nav>
 
         <div className="nav-actions">
+          <div className="nav-socials" aria-label="Social links">
+            <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FiGithub /></a>
+            <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer" aria-label="X"><FaXTwitter /></a>
+            <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FiSend /></a>
+          </div>
           <div className="language-switch" aria-label="Language selector">
             {['en', 'es'].map((item) => (
               <button
@@ -78,77 +90,67 @@ const Header = ({ onLanguageChange, t }) => {
         </div>
       </header>
 
-      <section id="top" className="hero-shell">
+      <section id="top" className="hero-shell hero-shell--console" ref={heroRef} onMouseMove={trackPointer}>
         <div className="hero-grid" aria-hidden="true" />
-        <motion.div
-          className="hero-orbit hero-orbit--one"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
-          aria-hidden="true"
-        />
-        <motion.div
-          className="hero-orbit hero-orbit--two"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
-          aria-hidden="true"
-        />
+        <div className="hero-ghost-type" aria-hidden="true"><span>ENGINEER</span><span>SYSTEMS</span></div>
+        <div className="hero-crosshair" aria-hidden="true" />
 
-        <div className="hero-layout">
-          <div className="hero-copy">
-            <motion.div
-              className="eyebrow"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+        <div className="hero-console">
+          <div className="hero-manifesto">
+            <div className="eyebrow">
               <span className="availability-dot" />
               {language === "es" ? "Disponible para proyectos ambiciosos" : "Available for ambitious projects"}
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.28, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <span>{language === "es" ? "CONSTRUYO" : "I BUILD"}</span>
-              <span className="hero-outline">{language === "es" ? "SISTEMAS" : "SYSTEMS"}</span>
-              <span>{language === "es" ? "QUE MUEVEN" : "THAT MOVE"} <em>ONCHAIN.</em></span>
-            </motion.h1>
-
-            <motion.div
-              className="hero-bottom"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.7 }}
-            >
-              <p>{t.header.description}</p>
-              <div className="hero-ctas">
-                <a href="#projects" className="primary-cta" onClick={(e) => goTo(e, "#projects")}>
-                  {language === "es" ? "Ver proyectos" : "Explore work"}<FiArrowDownRight />
-                </a>
-                <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer" className="text-cta">
-                  {language === "es" ? "Hablemos" : "Let's talk"}<FiSend />
-                </a>
-              </div>
-            </motion.div>
+            </div>
+            <h1>
+              <span>SOFTWARE</span>
+              <span>BLOCKCHAIN</span>
+              <span className="hero-manifesto__accent">{language === "es" ? "AGENTES IA" : "AI AGENTS"}</span>
+            </h1>
+            <div className="hero-manifesto__foot"><span>01—03</span><span>{language === "es" ? "ARQUITECTO DE SOFTWARE" : "SOFTWARE ARCHITECT"}</span></div>
           </div>
 
-          <motion.aside
-            className="hero-card"
-            initial={{ opacity: 0, scale: 0.9, rotate: 3 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ delay: 0.45, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <div className="hero-card__frame">
+          <div className="identity-core">
+            <div className="identity-core__halo identity-core__halo--outer" />
+            <div className="identity-core__halo identity-core__halo--inner" />
+            <svg className="identity-core__copy" viewBox="0 0 300 300" aria-hidden="true">
+              <defs><path id="core-copy-path" d="M 150,150 m -121,0 a 121,121 0 1,1 242,0 a 121,121 0 1,1 -242,0" /></defs>
+              <text><textPath href="#core-copy-path">LOPEZ — SOFTWARE ARCHITECT — AI AGENTS — BLOCKCHAIN — </textPath></text>
+            </svg>
+            <div className="identity-core__portrait">
               <img src="/assets/profile.png" alt="Illustrated portrait of Lopez" width="605" height="569" />
               <div className="hero-card__scanline" />
-              <span className="hero-card__label">LOPEZ // 2026</span>
             </div>
-            <div className="hero-card__meta">
-              <span>SOFTWARE ARCHITECT</span>
-              <span>40.4168° N<br />3.7038° W</span>
+            <span className="identity-core__node identity-core__node--one" />
+            <span className="identity-core__node identity-core__node--two" />
+            <span className="identity-core__node identity-core__node--three" />
+
+            <div className="signal-card signal-card--one"><span>SYSTEM</span><strong>ONLINE</strong><i /></div>
+            <div className="signal-card signal-card--two"><span>ACTIVE STACK</span><strong>AI / MCP / EVM</strong><small>BLOCK: 020481</small></div>
+            <div className="signal-card signal-card--three"><span>MADRID</span><strong>40.4168° N</strong><small>3.7038° W</small></div>
+          </div>
+
+          <div className="hero-intro">
+            <span className="hero-intro__index">[ LOPEZ.OS / v2.6 ]</span>
+            <p>{t.header.description}</p>
+            <div className="hero-ctas">
+              <a href="#projects" className="primary-cta" onClick={(e) => goTo(e, "#projects")}>
+                {language === "es" ? "Entrar al sistema" : "Enter the system"}<FiArrowDownRight />
+              </a>
+              <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer" className="text-cta">
+                {language === "es" ? "Abrir canal" : "Open channel"}<FiSend />
+              </a>
             </div>
-          </motion.aside>
+            <div className="hero-socials" aria-label="Social links">
+              <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FiGithub /><span>GITHUB</span></a>
+              <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FaXTwitter /><span>X / TWITTER</span></a>
+              <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer"><FiSend /><span>TELEGRAM</span></a>
+            </div>
+            <div className="hero-intro__stats">
+              <div><strong>7+</strong><span>{language === "es" ? "AÑOS" : "YEARS"}</span></div>
+              <div><strong>01</strong><span>{language === "es" ? "PREMIO" : "AWARD"}</span></div>
+              <div><strong>∞</strong><span>{language === "es" ? "IDEAS" : "IDEAS"}</span></div>
+            </div>
+          </div>
         </div>
 
         <div className="hero-ticker" aria-label="Specialties">
@@ -164,7 +166,7 @@ const Header = ({ onLanguageChange, t }) => {
         {menuOpen && (
           <motion.div className="mobile-menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className="mobile-menu__top">
-              <span>LOPEZ/ONCHAIN</span>
+              <span>LOPEZ / SOFTWARE ARCHITECT</span>
               <button onClick={() => setMenuOpen(false)} aria-label="Close menu"><FiX /></button>
             </div>
             <nav>

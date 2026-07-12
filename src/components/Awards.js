@@ -55,7 +55,7 @@ const Awards = ({ lang, t }) => {
           <span>{lang === "es" ? "INICIAR UNA CONVERSACIÓN" : "START A CONVERSATION"}</span><FiArrowUpRight />
         </a>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} LOPEZ ONCHAIN</span>
+          <span>© {new Date().getFullYear()} LOPEZ SOFTWARE</span>
           <div>
             <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FiGithub /> GITHUB</a>
             <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FaXTwitter /> X</a>

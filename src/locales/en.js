@@ -1,6 +1,6 @@
 const en = {
   header: {
-    description: "Blockchain & AI Agent Developer. Full-stack Web3, MCP integrations & agentic systems.",
+    description: "Software architect specializing in full-stack products, blockchain infrastructure and AI agent systems. Complex technology, engineered with care and ready for production.",
     stats: [
       { value: "7+", label: "Years Dev" },
       { value: "AI", label: "& Software" },
@@ -18,11 +18,11 @@ const en = {
   about: {
     description: "I'm Lopez, a full-stack developer with several years of experience in traditional software, blockchain, and security. In recent years I've been deep into Web3, building everything from smart contracts to full platforms with AI agent integration.",
     experience_title: "Experience",
-    experience: "Ambitious projects spanning traditional web, blockchain infrastructure, and AI agent systems. Full-stack delivery from DB schema to UI, including Farcaster mini-apps, MCP servers for Claude AI, agent API platforms, automated onchain routines, and enterprise software. Strong background in cybersecurity and scalable architecture.",
+    experience: "Ambitious products spanning traditional software, blockchain infrastructure and AI agent systems. Full-stack delivery from database architecture to user experience, including Farcaster mini-apps, MCP servers, agent API platforms, smart contracts and enterprise software. Strong background in cybersecurity and scalable systems.",
     tech_title: "Tech Stack",
     tech: "Languages\nSolidity, Rust, TypeScript, JavaScript, Java, C#\n\nFrameworks\nReact, Next.js, Node.js, Express, Spring, Unity\n\nBlockchain & AI\nEVM, Base, Solana, Farcaster, Base Smart Wallets\n\nDatabases\nPostgreSQL, MongoDB, MySQL, Oracle",
     passion_title: "Passion",
-    passion: "Building systems where AI, blockchain, and great UX converge. Designing agent infrastructures that make complex onchain interactions effortless.",
+    passion: "Building systems where AI, blockchain and excellent user experience converge. Designing agent infrastructure that turns complex distributed interactions into reliable products.",
     goal_title: "Goal",
     goal: "To lead the agentic revolution in Web3. Open, secure, and disruptive infrastructure that empowers developers and AI agents alike."
   },
@@ -103,12 +103,12 @@ const en = {
         period: "February 2024 – Present",
         location: "Remote",
         image: "/assets/workhistory/now.jpg",
-        description: "Building across the Web3 ecosystem. Farcaster mini-apps, payment tools, marketplace platforms, and onchain games on Base.",
+        description: "Building blockchain products independently: Farcaster mini-apps, payment tools, marketplace platforms and smart-contract games on Base.",
         highlights: [
           "WarpPay: all-in-one payments mini-app for Farcaster on Base",
           "PingGate: Web3 chat marketplace in Farcaster and Coinbase feeds",
           "Buddy Battles: GameFi app, winner of Best GameFi at Electroneum Hackathon 2025",
-          "Multiple onchain smart contracts deployed on Base"
+          "Multiple production smart contracts deployed on Base"
         ],
         tags: ["Solidity", "Farcaster", "React", "Base", "Web3", "EVM", "GameFi"]
       },

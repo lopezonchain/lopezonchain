@@ -84,6 +84,16 @@ const About = ({ lang, t }) => {
         </div>
       </Reveal>
 
+      <Reveal className="build-protocol">
+        <div className="build-protocol__label">{lang === "es" ? "PROTOCOLO DE CONSTRUCCIÓN" : "BUILD PROTOCOL"}</div>
+        <div className="build-protocol__flow">
+          {[lang === "es" ? "ENTENDER" : "UNDERSTAND", lang === "es" ? "DISEÑAR" : "DESIGN", lang === "es" ? "CONSTRUIR" : "BUILD", lang === "es" ? "LANZAR" : "SHIP"].map((step, index) => (
+            <div key={step}><span>0{index + 1}</span><strong>{step}</strong><i /></div>
+          ))}
+        </div>
+        <code>IF (idea.isAmbitious) &#123; build(it); ship(it); evolve(it); &#125;</code>
+      </Reveal>
+
       <div className="about-statement" aria-hidden="true">
         <span>BUILD</span><span>SHIP</span><span>EVOLVE</span>
       </div>

@@ -12,7 +12,7 @@ export default function Document() {
         />
         <meta name="keywords" content="blockchain, developer, software" />
         <meta name="author" content="Lopez" />
-        <meta name='fc:frame' content='{"version":"next","imageUrl":"https://lopezonchain.xyz/assets/profile.png","aspectRatio":"3:2","button":{"title":"🚀Join Lopez Onchain Universe🚀","action":{"type":"launch_frame","name":"Lopez Onchain Universe","url":"https://lopezonchain.xyz","splashImageUrl":"https://lopezonchain.xyz/assets/profile.png","splashBackgroundColor":"#001c2a"}}}' />
+        <meta name='fc:frame' content='{"version":"next","imageUrl":"https://lopezonchain.xyz/assets/profile.png","aspectRatio":"3:2","button":{"title":"Explore Lopez Software","action":{"type":"launch_frame","name":"Lopez Software","url":"https://lopezonchain.xyz","splashImageUrl":"https://lopezonchain.xyz/assets/profile.png","splashBackgroundColor":"#080907"}}}' />
 
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
