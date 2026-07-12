@@ -72,15 +72,17 @@ img { display: block; max-width: 100%; }
 }
 .brand-mark { display: inline-flex; align-items: center; gap: 11px; width: fit-content; }
 .brand-glyph {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 38px;
   height: 38px;
-  background: var(--acid);
-  color: var(--ink);
-  font-weight: 700;
-  letter-spacing: -2px;
+  color: var(--acid);
+  filter: drop-shadow(5px 5px 0 rgba(199,255,63,.12));
+  transition: transform .3s cubic-bezier(.22,1,.36,1), filter .3s ease;
 }
+.brand-glyph svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.brand-glyph__cursor { transform-origin: center; transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.brand-mark:hover .brand-glyph { transform: rotate(-3deg) scale(1.06); filter: drop-shadow(7px 7px 0 rgba(199,255,63,.2)); }
+.brand-mark:hover .brand-glyph__cursor { transform: translate(-3px, 3px); }
 .brand-name { font-size: 13px; font-weight: 600; letter-spacing: -.03em; line-height: .95; }
 .brand-name span { display: block; color: var(--acid); }
 .desktop-nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 50px); }

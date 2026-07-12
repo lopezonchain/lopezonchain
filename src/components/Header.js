@@ -54,7 +54,13 @@ const Header = ({ onLanguageChange, t }) => {
         className={`site-nav ${scrolled ? "site-nav--scrolled" : ""}`}
       >
         <a className="brand-mark" href="#top" onClick={(e) => goTo(e, "#top")} aria-label="Lopez — home">
-          <span className="brand-glyph">L/</span>
+          <span className="brand-glyph" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <rect x="0.75" y="0.75" width="46.5" height="46.5" fill="currentColor" stroke="var(--paper)" strokeOpacity="0.18" strokeWidth="1.5" />
+              <path d="M12 10H19V30H35V37H12V10Z" fill="var(--ink)" />
+              <rect className="brand-glyph__cursor" x="28" y="10" width="7" height="7" fill="var(--coral)" />
+            </svg>
+          </span>
           <span className="brand-name">LOPEZ<span>SOFTWARE BUILDER</span></span>
         </a>
 
