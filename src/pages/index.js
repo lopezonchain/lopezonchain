@@ -16,13 +16,24 @@ import es from "../locales/es";
 export default function Home() {
   const [language, setLanguage] = useState("en");
   const [showScroll, setShowScroll] = useState(false);
+  const [activeSection, setActiveSection] = useState("top");
   const t = language === "en" ? en : es;
 
   useEffect(() => {
     import("@farcaster/frame-sdk").then(({ sdk }) => sdk.actions.ready({ disableNativeGestures: true }));
     const onScroll = () => setShowScroll(window.scrollY > 650);
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => entry.isIntersecting && setActiveSection(entry.target.id));
+    }, { rootMargin: "-42% 0px -48% 0px" });
+    ["top", "about", "projects", "work", "awards"].forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -40,7 +51,7 @@ export default function Home() {
       <AnimatePresence>
         {showScroll && (
           <motion.button
-            className="back-to-top"
+            className={`back-to-top back-to-top--${activeSection}`}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}

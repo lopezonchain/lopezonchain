@@ -55,7 +55,7 @@ const Header = ({ onLanguageChange, t }) => {
       >
         <a className="brand-mark" href="#top" onClick={(e) => goTo(e, "#top")} aria-label="Lopez — home">
           <span className="brand-glyph">L/</span>
-          <span className="brand-name">LOPEZ<span>SOFTWARE ARCHITECT</span></span>
+          <span className="brand-name">LOPEZ<span>SOFTWARE BUILDER</span></span>
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
@@ -106,7 +106,7 @@ const Header = ({ onLanguageChange, t }) => {
               <span>BLOCKCHAIN</span>
               <span className="hero-manifesto__accent">{language === "es" ? "AGENTES IA" : "AI AGENTS"}</span>
             </h1>
-            <div className="hero-manifesto__foot"><span>01—03</span><span>{language === "es" ? "ARQUITECTO DE SOFTWARE" : "SOFTWARE ARCHITECT"}</span></div>
+            <div className="hero-manifesto__foot"><span>01—03</span><span>{language === "es" ? "BUILDER & ARQUITECTO DE SOFTWARE" : "SOFTWARE BUILDER & ARCHITECT"}</span></div>
           </div>
 
           <div className="identity-core">
@@ -114,7 +114,7 @@ const Header = ({ onLanguageChange, t }) => {
             <div className="identity-core__halo identity-core__halo--inner" />
             <svg className="identity-core__copy" viewBox="0 0 300 300" aria-hidden="true">
               <defs><path id="core-copy-path" d="M 150,150 m -121,0 a 121,121 0 1,1 242,0 a 121,121 0 1,1 -242,0" /></defs>
-              <text><textPath href="#core-copy-path">LOPEZ — SOFTWARE ARCHITECT — AI AGENTS — BLOCKCHAIN — </textPath></text>
+              <text><textPath href="#core-copy-path">LOPEZ — SOFTWARE BUILDER — ARCHITECT — AI AGENTS — BLOCKCHAIN — </textPath></text>
             </svg>
             <div className="identity-core__portrait">
               <img src="/assets/profile.png" alt="Illustrated portrait of Lopez" width="605" height="569" />
@@ -166,7 +166,7 @@ const Header = ({ onLanguageChange, t }) => {
         {menuOpen && (
           <motion.div className="mobile-menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className="mobile-menu__top">
-              <span>LOPEZ / SOFTWARE ARCHITECT</span>
+              <span>LOPEZ / SOFTWARE BUILDER</span>
               <button onClick={() => setMenuOpen(false)} aria-label="Close menu"><FiX /></button>
             </div>
             <nav>

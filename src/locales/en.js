@@ -1,6 +1,6 @@
 const en = {
   header: {
-    description: "Software architect specializing in full-stack products, blockchain infrastructure and AI agent systems. Complex technology, engineered with care and ready for production.",
+    description: "Software Builder and architect specializing in full-stack products, blockchain infrastructure and AI agent systems. I turn complex technology into polished, reliable, production-ready products.",
     stats: [
       { value: "7+", label: "Years Dev" },
       { value: "AI", label: "& Software" },
@@ -56,6 +56,13 @@ const en = {
     visitButtonText: "Go to",
     list: [
       {
+        id: 0,
+        title: "KernScript",
+        description: "A programming language designed to dramatically reduce token usage when AI agents create JavaScript and TypeScript projects. Compact syntax that preserves expressiveness and accelerates assisted software development.",
+        visitUrl: "https://x.com/KernScript",
+        image: "/assets/KernScript.png"
+      },
+      {
         id: 1,
         title: "Plazr (POC)",
         description: "Real events platform, with QR tickets, assistance verification and much more",
@@ -64,7 +71,7 @@ const en = {
       },
       {
         id: 2,
-        title: "Indexy",
+        title: "Indexy (POC)",
         description: "Freelance & Lead developer. Crypto index tracking platform. Real-time market data, Agent API, MCP server for Claude AI, Farcaster mini-app on Base, automated contest system, and Base smart wallet auth via Privy.",
         visitUrl: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png"
@@ -98,19 +105,20 @@ const en = {
       {
         id: 1,
         featured: true,
-        role: "Independent Software Architect",
+        role: "Independent Software Builder",
         company: "Freelance",
         period: "February 2024 – Present",
         location: "Remote",
         image: "/assets/workhistory/now.jpg",
-        description: "Building blockchain products independently: Farcaster mini-apps, payment tools, marketplace platforms and smart-contract games on Base.",
+        description: "Building independent software products across programming languages, event platforms, payments, marketplaces and interactive applications. KernScript is an actively developed product; the remaining projects were created as focused proofs of concept.",
         highlights: [
-          "WarpPay: all-in-one payments mini-app for Farcaster on Base",
-          "PingGate: Web3 chat marketplace in Farcaster and Coinbase feeds",
-          "Buddy Battles: GameFi app, winner of Best GameFi at Electroneum Hackathon 2025",
-          "Multiple production smart contracts deployed on Base"
+          "KernScript: token-efficient programming language for building JavaScript and TypeScript projects with AI agents",
+          "Plazr (POC): real-world events platform with QR ticketing and attendance verification",
+          "WarpPay (POC): all-in-one payments mini-app for Farcaster on Base",
+          "PingGate (POC): Web3 chat marketplace in Farcaster and Coinbase feeds",
+          "Buddy Battles (POC): GameFi app, winner of Best GameFi at Electroneum Hackathon 2025"
         ],
-        tags: ["Solidity", "Farcaster", "React", "Base", "Web3", "EVM", "GameFi"]
+        tags: ["TypeScript", "JavaScript", "AI Agents", "React", "Solidity", "Base", "Product Development"]
       },
       {
         id: 2,
