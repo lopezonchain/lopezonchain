@@ -105,10 +105,27 @@ const es = {
     list: [
       {
         id: 1,
+        role: "Desarrollador de software independiente",
+        company: "Freelance",
+        period: "Febrero 2024 – Presente",
+        location: "Remoto",
+        image: "/assets/workhistory/now.jpg",
+        description: "Construcción independiente de productos de software: lenguajes de programación, plataformas de eventos, pagos, marketplaces y aplicaciones interactivas. KernScript es un producto en desarrollo activo; el resto se creó como pruebas de concepto enfocadas.",
+        highlights: [
+          "KernScript: lenguaje de programación eficiente en tokens para crear proyectos JavaScript y TypeScript con agentes de IA",
+          "Plazr (POC): plataforma de eventos reales con entradas QR y verificación de asistencia",
+          "WarpPay (POC): mini-app de pagos todo en uno para Farcaster en Base",
+          "PingGate (POC): marketplace Web3 basado en chat en Farcaster y Coinbase feeds",
+          "Buddy Battles (POC): app GameFi, ganadora de Best GameFi en el Electroneum Hackathon 2025"
+        ],
+        tags: ["TypeScript", "JavaScript", "Agentes IA", "React", "Solidity", "Base", "Desarrollo de producto"]
+      },
+      {
+        id: 2,
         featured: true,
         role: "Desarrollador Jefe",
         company: "Indexy",
-        period: "Julio 2025 – Presente",
+        period: "Julio 2025 – Junio 2026",
         location: "Remoto",
         url: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png",
@@ -128,23 +145,7 @@ const es = {
         ],
         tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "MCP", "Farcaster", "Base", "Privy", "Smart Wallets", "Agent API"]
       },
-      {
-        id: 2,
-        role: "Software Builder independiente",
-        company: "Freelance",
-        period: "Febrero 2024 – Presente",
-        location: "Remoto",
-        image: "/assets/workhistory/now.jpg",
-        description: "Construcción independiente de productos de software: lenguajes de programación, plataformas de eventos, pagos, marketplaces y aplicaciones interactivas. KernScript es un producto en desarrollo activo; el resto se creó como pruebas de concepto enfocadas.",
-        highlights: [
-          "KernScript: lenguaje de programación eficiente en tokens para crear proyectos JavaScript y TypeScript con agentes de IA",
-          "Plazr (POC): plataforma de eventos reales con entradas QR y verificación de asistencia",
-          "WarpPay (POC): mini-app de pagos todo en uno para Farcaster en Base",
-          "PingGate (POC): marketplace Web3 basado en chat en Farcaster y Coinbase feeds",
-          "Buddy Battles (POC): app GameFi, ganadora de Best GameFi en el Electroneum Hackathon 2025"
-        ],
-        tags: ["TypeScript", "JavaScript", "Agentes IA", "React", "Solidity", "Base", "Desarrollo de producto"]
-      },
+
       {
         id: 3,
         role: "Desarrollador Full-Stack Senior",

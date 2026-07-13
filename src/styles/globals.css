@@ -808,3 +808,10 @@ img { display: block; max-width: 100%; }
   .hero-socials a { font-size: 10px; }
   .footer-bottom { font-size: 10px; line-height: 1.5; }
 }
+
+@media (min-width: 761px) {
+  #awards .award-layout { width: calc(100% + 140px); margin-left: -70px; padding-inline: clamp(18px, 2vw, 36px); }
+  #awards .award-stamp { transform: translate3d(clamp(-48px, var(--scroll-shift), 48px), var(--scroll-rise), 0) rotate(calc(-10deg + var(--scroll-rotate))); }
+  #awards .award-visual { transform: translate3d(clamp(-48px, var(--scroll-shift-reverse), 48px), var(--scroll-rise), 0) rotate(calc(3deg + var(--scroll-rotate))); }
+  #awards .award-section__burst { pointer-events: none; }
+}
