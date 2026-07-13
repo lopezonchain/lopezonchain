@@ -422,7 +422,7 @@ img { display: block; max-width: 100%; }
   background: radial-gradient(380px circle at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(199,255,63,.055), transparent 70%);
 }
 .system-cursor, .system-cursor-dot { position: fixed; z-index: 1200; left: 0; top: 0; pointer-events: none; }
-.system-cursor { width: 36px; height: 36px; margin: -18px 0 0 -18px; border: 1px solid rgba(199,255,63,.65); border-radius: 50%; transition: width .2s, height .2s, margin .2s; }
+.system-cursor { width: 36px; height: 36px; margin: -18px 0 0 -18px; border: 1px solid #fff; border-radius: 50%; mix-blend-mode: difference; box-shadow: 0 0 0 1px rgba(8,9,7,.45), 0 0 18px rgba(255,255,255,.45); transition: width .2s, height .2s, margin .2s; }
 .system-cursor::before, .system-cursor::after { content: ""; position: absolute; background: var(--acid); opacity: .55; }
 .system-cursor::before { width: 8px; height: 1px; left: 13px; top: 17px; }
 .system-cursor::after { width: 1px; height: 8px; left: 17px; top: 13px; }
@@ -539,6 +539,10 @@ img { display: block; max-width: 100%; }
 
 @media (pointer: coarse) {
   .system-cursor, .system-cursor-dot, .pointer-aura { display: none; }
+}
+
+@media (pointer: fine) {
+  html, body, a, button, [role="button"] { cursor: none; }
 }
 
 /* System windows and build protocol */
