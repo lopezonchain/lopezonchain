@@ -426,6 +426,10 @@ img { display: block; max-width: 100%; }
 .system-cursor::before, .system-cursor::after { content: ""; position: absolute; background: var(--acid); opacity: .55; }
 .system-cursor::before { width: 8px; height: 1px; left: 13px; top: 17px; }
 .system-cursor::after { width: 1px; height: 8px; left: 17px; top: 13px; }
+.system-cursor.is-clickable { width: 52px; height: 52px; margin: -26px 0 0 -26px; border-radius: 14px; border-color: var(--acid); box-shadow: 0 0 0 1px rgba(8,9,7,.5), 0 0 24px rgba(199,255,63,.42); }
+.system-cursor.is-clickable::before { width: 12px; left: 19px; top: 25px; background: var(--acid); }
+.system-cursor.is-clickable::after { height: 12px; left: 25px; top: 19px; background: var(--acid); }
+.system-cursor.is-clickable span::before { content: "CLICK"; position: absolute; left: 50%; top: calc(100% + 8px); transform: translateX(-50%); color: var(--acid); font: 500 7px var(--mono); letter-spacing: .12em; white-space: nowrap; }
 .system-cursor-dot { width: 3px; height: 3px; margin: -1.5px 0 0 -1.5px; border-radius: 50%; background: var(--acid); }
 .system-rail { position: fixed; z-index: 88; left: 8px; top: 100px; bottom: 70px; width: 34px; padding: 11px 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between; color: var(--paper); background: rgba(8,9,7,.72); border: 1px solid rgba(241,240,233,.18); backdrop-filter: blur(12px); transition: color .35s ease, background .35s ease, border-color .35s ease; }
 .system-rail--about { color: var(--ink); background: rgba(241,240,233,.82); border-color: rgba(8,9,7,.28); }
@@ -542,7 +546,7 @@ img { display: block; max-width: 100%; }
 }
 
 @media (pointer: fine) {
-  html, body, a, button, [role="button"] { cursor: none; }
+  html, body, a, button, [role="button"], input, select, textarea { cursor: none !important; }
 }
 
 /* System windows and build protocol */

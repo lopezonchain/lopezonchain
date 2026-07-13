@@ -24,6 +24,8 @@ const InterfaceLayer = ({ lang }) => {
     const move = (event) => {
       cursorRef.current?.style.setProperty("transform", `translate3d(${event.clientX}px, ${event.clientY}px, 0)`);
       dotRef.current?.style.setProperty("transform", `translate3d(${event.clientX}px, ${event.clientY}px, 0)`);
+      const isClickable = event.target?.closest?.("a, button, [role='button'], input, select, textarea");
+      cursorRef.current?.classList.toggle("is-clickable", Boolean(isClickable));
       document.documentElement.style.setProperty("--cursor-x", `${event.clientX}px`);
       document.documentElement.style.setProperty("--cursor-y", `${event.clientY}px`);
     };
