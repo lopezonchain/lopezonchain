@@ -412,7 +412,7 @@ img { display: block; max-width: 100%; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
 }
 
-/* LOPEZ.OS — spatial interface layer */
+/* LOPEZ.OS spatial interface layer */
 .pointer-aura {
   position: fixed;
   inset: 0;
@@ -742,7 +742,7 @@ img { display: block; max-width: 100%; }
   #about .section-label, #projects .section-label, #work .section-label, #awards .section-label { transform: none; }
 }
 
-/* Readability pass — technical does not mean microscopic */
+/* Readability pass: technical does not mean microscopic */
 .eyebrow, .section-label { font-size: 11px; line-height: 1.45; }
 .desktop-nav a span { font-size: 10px; }
 .language-switch button { font-size: 11px; }

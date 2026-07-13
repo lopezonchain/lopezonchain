@@ -53,7 +53,7 @@ const Header = ({ onLanguageChange, t }) => {
       <header
         className={`site-nav ${scrolled ? "site-nav--scrolled" : ""}`}
       >
-        <a className="brand-mark" href="#top" onClick={(e) => goTo(e, "#top")} aria-label="Lopez — home">
+        <a className="brand-mark" href="#top" onClick={(e) => goTo(e, "#top")} aria-label="Lopez home">
           <span className="brand-glyph" aria-hidden="true">
             <svg viewBox="0 0 48 48" role="img">
               <rect x="0.75" y="0.75" width="46.5" height="46.5" fill="currentColor" stroke="var(--paper)" strokeOpacity="0.18" strokeWidth="1.5" />
@@ -112,7 +112,7 @@ const Header = ({ onLanguageChange, t }) => {
               <span>BLOCKCHAIN</span>
               <span className="hero-manifesto__accent">{language === "es" ? "AGENTES IA" : "AI AGENTS"}</span>
             </h1>
-            <div className="hero-manifesto__foot"><span>01—03</span><span>{language === "es" ? "BUILDER & ARQUITECTO DE SOFTWARE" : "SOFTWARE BUILDER & ARCHITECT"}</span></div>
+            <div className="hero-manifesto__foot"><span>01/03</span><span>{language === "es" ? "BUILDER & ARQUITECTO DE SOFTWARE" : "SOFTWARE BUILDER & ARCHITECT"}</span></div>
           </div>
 
           <div className="identity-core">
@@ -120,7 +120,7 @@ const Header = ({ onLanguageChange, t }) => {
             <div className="identity-core__halo identity-core__halo--inner" />
             <svg className="identity-core__copy" viewBox="0 0 300 300" aria-hidden="true">
               <defs><path id="core-copy-path" d="M 150,150 m -121,0 a 121,121 0 1,1 242,0 a 121,121 0 1,1 -242,0" /></defs>
-              <text><textPath href="#core-copy-path">LOPEZ — SOFTWARE BUILDER — ARCHITECT — AI AGENTS — BLOCKCHAIN — </textPath></text>
+              <text><textPath href="#core-copy-path">LOPEZ • SOFTWARE BUILDER • ARCHITECT • AI AGENTS • BLOCKCHAIN • </textPath></text>
             </svg>
             <div className="identity-core__portrait">
               <img src="/assets/profile.png" alt="Illustrated portrait of Lopez" width="605" height="569" />

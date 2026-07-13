@@ -6,7 +6,7 @@ import { useEffect } from "react";
  * Mobile-only scroll illumination effect.
  * Elements with `.glow-hover` near the vertical center of the viewport
  * receive the `.is-lit` class, replicating the desktop hover glow.
- * No effect on desktop (≥768px) — hover handles it there.
+ * No effect on desktop (≥768px); hover handles it there.
  */
 const ScrollGlowEffect = () => {
   useEffect(() => {
