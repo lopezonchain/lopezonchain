@@ -305,7 +305,7 @@ img { display: block; max-width: 100%; }
 .footer-bottom > div { display: flex; gap: 25px; }
 .footer-bottom a { display: flex; align-items: center; gap: 6px; }
 .footer-bottom button { justify-self: end; border: 0; background: transparent; cursor: pointer; font: inherit; letter-spacing: inherit; }
-.back-to-top { position: fixed; z-index: 90; right: 24px; bottom: 24px; display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid rgba(8,9,7,.35); background: var(--acid); color: var(--ink); cursor: pointer; box-shadow: 7px 7px 0 rgba(0,0,0,.28); transition: background .4s ease, color .4s ease, border-color .4s ease, box-shadow .4s ease; }
+.back-to-top { position: fixed; z-index: 90; right: 24px; bottom: 52px; display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid rgba(8,9,7,.35); background: var(--acid); color: var(--ink); cursor: pointer; box-shadow: 7px 7px 0 rgba(0,0,0,.28); transition: background .4s ease, color .4s ease, border-color .4s ease, box-shadow .4s ease; }
 .back-to-top--about { background: var(--paper); color: var(--ink); border-color: var(--ink); }
 .back-to-top--projects { background: var(--project); color: var(--ink); border-color: var(--ink); }
 .back-to-top--work { background: var(--ink); color: var(--paper); border-color: rgba(241,240,233,.55); box-shadow: 7px 7px 0 rgba(199,255,63,.28); }
@@ -601,11 +601,12 @@ img { display: block; max-width: 100%; }
   --scroll-rise: 110px;
   --scroll-rotate: -2deg;
   --scan-position: 0%;
+  isolation: isolate;
 }
 #about::after, #projects::after, #work::after, #awards::after {
   content: "";
   position: absolute;
-  z-index: 20;
+  z-index: 0;
   pointer-events: none;
   left: 0;
   right: 0;
@@ -614,6 +615,23 @@ img { display: block; max-width: 100%; }
   opacity: .22;
   background: linear-gradient(90deg, transparent 3%, currentColor 25%, transparent 72%);
   box-shadow: 0 0 24px currentColor;
+}
+#about > .section-label,
+#about > .about-intro,
+#about > .about-principles,
+#about > .capabilities,
+#about > .build-protocol,
+#about > .about-statement,
+#projects > .section-label,
+#projects > .projects-heading,
+#projects > .project-stage,
+#projects > .project-list,
+#work > .section-label,
+#work > .experience-layout,
+#awards > .section-label,
+#awards > .award-layout {
+  position: relative;
+  z-index: 2;
 }
 #about .about-intro h2 { transform: translate3d(var(--scroll-shift),0,0); will-change: transform; }
 #about .about-intro__copy { transform: translate3d(var(--scroll-shift-reverse),0,0); will-change: transform; }
@@ -674,26 +692,6 @@ img { display: block; max-width: 100%; }
   transform: translateY(80%) skewY(7deg);
   animation: chapter-title 1.15s cubic-bezier(.22,1,.36,1) both;
 }
-.scroll-chapter-flash > span {
-  grid-area: 1 / 1;
-  align-self: start;
-  justify-self: center;
-  margin-top: 18vh;
-  padding: 8px 10px;
-  border: 1px solid currentColor;
-  font: 500 9px var(--mono);
-}
-.scroll-chapter-flash > i {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 2px;
-  background: currentColor;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: chapter-line 1.05s cubic-bezier(.22,1,.36,1) both;
-}
 .scroll-chapter-flash--about { color: var(--coral); }
 .scroll-chapter-flash--projects { color: var(--paper); }
 .scroll-chapter-flash--work { color: var(--acid); }
@@ -709,12 +707,6 @@ img { display: block; max-width: 100%; }
   35% { transform: translateY(0) skewY(0); }
   68% { transform: translateY(0) skewY(0); }
   100% { transform: translateY(-85%) skewY(-6deg); }
-}
-@keyframes chapter-line {
-  0% { transform: scaleX(0); transform-origin: left; }
-  45% { transform: scaleX(1); transform-origin: left; }
-  55% { transform: scaleX(1); transform-origin: right; }
-  100% { transform: scaleX(0); transform-origin: right; }
 }
 
 #about .capabilities__grid,
@@ -747,7 +739,6 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 760px) {
   .scroll-chapter-flash strong { font-size: 18vw; -webkit-text-stroke-width: 1px; }
-  .scroll-chapter-flash > span { margin-top: 23vh; }
   #about .section-label, #projects .section-label, #work .section-label, #awards .section-label { transform: none; }
 }
 
@@ -799,7 +790,6 @@ img { display: block; max-width: 100%; }
 .build-protocol__label { font-size: 11px; }
 .build-protocol__flow span { font-size: 10px; opacity: .72; }
 .build-protocol code { font-size: 11px; line-height: 1.45; overflow-x: auto; }
-.scroll-chapter-flash > span { font-size: 11px; }
 
 @media (max-width: 760px) {
   .eyebrow, .section-label { font-size: 10px; }

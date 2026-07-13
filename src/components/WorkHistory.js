@@ -17,7 +17,7 @@ const WorkHistory = ({ lang, t }) => {
         <div className="experience-heading">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2>{lang === "es" ? "Años resolviendo" : "Years solving"}<br /><em>{lang === "es" ? "lo difícil." : "the hard stuff."}</em></h2>
-            <p>{lang === "es" ? "Experiencia real construyendo producto, liderando arquitectura y entregando software de principio a fin." : "Real experience building product, leading architecture and shipping software end to end."}</p>
+            <p>{lang === "es" ? "Experiencia real construyendo productos, liderando arquitectura y entregando software de principio a fin. También trabajo con solvencia sobre software existente, desarrollando nuevas funcionalidades, modernizando sistemas y optimizando su rendimiento." : "Real experience building products, leading architecture and shipping software end to end. Equally comfortable working with established codebases—delivering new features, modernizing systems and improving performance."}</p>
           </motion.div>
           <div className="experience-counter">
             <strong>7+</strong>

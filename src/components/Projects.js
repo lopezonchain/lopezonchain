@@ -61,7 +61,7 @@ const Projects = ({ lang, t }) => {
               transition={{ duration: 0.4 }}
               className="project-copy"
             >
-              <span className="project-copy__type">WEB3 / PRODUCT / ENGINEERING</span>
+              <span className="project-copy__type">AI / WEB3 / PRODUCT / ENGINEERING</span>
               <h3>{active.title}</h3>
               <p>{active.description}</p>
               {active.visitUrl && (

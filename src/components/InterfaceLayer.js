@@ -60,7 +60,7 @@ const InterfaceLayer = ({ lang }) => {
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => entry.isIntersecting && setActive(entry.target.id));
-    }, { rootMargin: "-40% 0px -50% 0px" });
+    }, { rootMargin: "-30% 0px -60% 0px" });
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
@@ -81,8 +81,6 @@ const InterfaceLayer = ({ lang }) => {
     work: lang === "es" ? "EXPERIENCIA" : "EXPERIENCE",
     awards: lang === "es" ? "RECONOCIMIENTO" : "RECOGNITION",
   };
-
-  const chapterNumber = sections.indexOf(active);
 
   return (
     <>
@@ -109,9 +107,7 @@ const InterfaceLayer = ({ lang }) => {
 
       {active !== "top" && (
         <div className={`scroll-chapter-flash scroll-chapter-flash--${active}`} key={active} aria-hidden="true">
-          <span>{String(chapterNumber).padStart(2, "0")}</span>
           <strong>{chapterLabels[active]}</strong>
-          <i />
         </div>
       )}
     </>

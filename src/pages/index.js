@@ -21,18 +21,22 @@ export default function Home() {
 
   useEffect(() => {
     import("@farcaster/frame-sdk").then(({ sdk }) => sdk.actions.ready({ disableNativeGestures: true }));
-    const onScroll = () => setShowScroll(window.scrollY > 650);
+    const sectionIds = ["top", "about", "projects", "work", "awards"];
+    const onScroll = () => {
+      setShowScroll(window.scrollY > 650);
+      const probe = window.innerHeight * 0.7;
+      const current = sectionIds.find((id) => {
+        const rect = document.getElementById(id)?.getBoundingClientRect();
+        return rect && rect.top <= probe && rect.bottom > probe;
+      });
+      if (current) setActiveSection(current);
+    };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => entry.isIntersecting && setActiveSection(entry.target.id));
-    }, { rootMargin: "-42% 0px -48% 0px" });
-    ["top", "about", "projects", "work", "awards"].forEach((id) => {
-      const section = document.getElementById(id);
-      if (section) observer.observe(section);
-    });
+    window.addEventListener("resize", onScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", onScroll);
-      observer.disconnect();
+      window.removeEventListener("resize", onScroll);
     };
   }, []);
 
