@@ -224,6 +224,7 @@ img { display: block; max-width: 100%; }
 .project-copy { margin: auto 0; }
 .project-copy__type { color: var(--acid); font: 500 9px var(--mono); letter-spacing: .14em; }
 .project-copy h3 { margin: 30px 0 24px; font-size: clamp(42px, 5vw, 78px); line-height: .92; letter-spacing: -.06em; }
+.project-status { display: inline-block; margin: -10px 0 24px; padding: 7px 10px; border: 1px solid rgba(241,240,233,.35); color: #c4c7be; font: 500 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 .project-copy p { margin: 0 0 38px; color: #adb0a6; font-size: 15px; line-height: 1.7; }
 .project-copy a { color: var(--acid); }
 .project-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; }

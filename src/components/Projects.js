@@ -63,6 +63,7 @@ const Projects = ({ lang, t }) => {
             >
               <span className="project-copy__type">AI / WEB3 / PRODUCT / ENGINEERING</span>
               <h3>{active.title}</h3>
+              {active.status && <span className="project-status">{active.status}</span>}
               <p>{active.description}</p>
               {active.visitUrl && (
                 <a href={active.visitUrl} target="_blank" rel="noopener noreferrer">
