@@ -13,6 +13,29 @@ const navItems = (t) => [
   { href: "#awards", label: t.nav.awards },
 ];
 
+const tickerItems = [
+  "AI AGENTS",
+  "SOFTWARE ARCHITECTURE",
+  "FULL-STACK ENGINEERING",
+  "PRODUCT STRATEGY",
+  "TYPESCRIPT",
+  "JAVASCRIPT",
+  "MCP INTEGRATIONS",
+  "BLOCKCHAIN INFRASTRUCTURE",
+  "SMART CONTRACTS",
+  "API DESIGN",
+  "DISTRIBUTED SYSTEMS",
+  "PERFORMANCE OPTIMIZATION",
+  "LEGACY MODERNIZATION",
+  "DEVELOPER TOOLING",
+  "PAYMENTS",
+  "DATA PLATFORMS",
+  "UX ENGINEERING",
+  "CYBERSECURITY",
+  "DATABASE ARCHITECTURE",
+  "AUTOMATION",
+];
+
 const Header = ({ onLanguageChange, t }) => {
   const [language, setLanguage] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -161,7 +184,7 @@ const Header = ({ onLanguageChange, t }) => {
 
         <div className="hero-ticker" aria-label="Specialties">
           <div>
-            {["AI AGENTS", "WEB3", "MCP", "FULL-STACK", "SMART CONTRACTS", "PRODUCT DESIGN", "AI AGENTS", "WEB3", "MCP", "FULL-STACK", "SMART CONTRACTS", "PRODUCT DESIGN"].map((item, i) => (
+            {[...tickerItems, ...tickerItems, ...tickerItems].map((item, i) => (
               <span key={`${item}-${i}`}>{item}<b>✦</b></span>
             ))}
           </div>

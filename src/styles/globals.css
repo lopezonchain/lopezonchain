@@ -161,10 +161,10 @@ img { display: block; max-width: 100%; }
 .hero-card__meta { display: flex; justify-content: space-between; padding: 13px 5px 4px; font: 400 8px/1.5 var(--mono); letter-spacing: .12em; color: #a6a99f; }
 .hero-card__meta span:last-child { text-align: right; }
 .hero-ticker { position: absolute; z-index: 4; bottom: 0; left: 0; right: 0; overflow: hidden; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(8,9,7,.8); }
-.hero-ticker > div { display: flex; width: max-content; animation: ticker 25s linear infinite; }
+.hero-ticker > div { display: flex; width: max-content; animation: ticker 58s linear infinite; }
 .hero-ticker span { display: flex; align-items: center; gap: 34px; margin-right: 34px; white-space: nowrap; font: 500 10px var(--mono); letter-spacing: .15em; }
 .hero-ticker b { color: var(--acid); }
-@keyframes ticker { to { transform: translateX(-50%); } }
+@keyframes ticker { to { transform: translateX(-33.333333%); } }
 
 /* Shared sections */
 .section { position: relative; padding: clamp(105px, 11vw, 170px) max(24px, calc((100vw - 1320px) / 2)); scroll-margin-top: 80px; }
