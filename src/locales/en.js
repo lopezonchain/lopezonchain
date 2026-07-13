@@ -71,7 +71,7 @@ const en = {
       },
       {
         id: 2,
-        title: "Indexy (POC)",
+        title: "Indexy (Discontinued)",
         description: "Freelance & Lead developer. Crypto index tracking platform. Real-time market data, Agent API, MCP server for Claude AI, Farcaster mini-app on Base, automated contest system, and Base smart wallet auth via Privy.",
         visitUrl: "https://indexy.xyz",
         image: "/assets/workhistory/indexy.png"
