@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowDownRight, FiGithub, FiMenu, FiSend, FiX } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const navItems = (t) => [
   { href: "#about", label: t.nav.about },
@@ -36,7 +36,7 @@ const tickerItems = [
   "AUTOMATION",
 ];
 
-const Header = ({ onLanguageChange, t }) => {
+const Header = ({ onLanguageChange, onContactOpen, t }) => {
   const [language, setLanguage] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -99,7 +99,7 @@ const Header = ({ onLanguageChange, t }) => {
           <div className="nav-socials" aria-label="Social links">
             <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FiGithub /></a>
             <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer" aria-label="X"><FaXTwitter /></a>
-            <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FiSend /></a>
+            <a href="https://www.linkedin.com/in/ia-lopez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
           </div>
           <div className="language-switch" aria-label="Language selector">
             {['en', 'es'].map((item) => (
@@ -165,14 +165,14 @@ const Header = ({ onLanguageChange, t }) => {
               <a href="#projects" className="primary-cta" onClick={(e) => goTo(e, "#projects")}>
                 {language === "es" ? "Entrar al sistema" : "Enter the system"}<FiArrowDownRight />
               </a>
-              <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer" className="text-cta">
+              <button type="button" onClick={onContactOpen} className="text-cta">
                 {language === "es" ? "Abrir canal" : "Open channel"}<FiSend />
-              </a>
+              </button>
             </div>
             <div className="hero-socials" aria-label="Social links">
               <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FiGithub /><span>GITHUB</span></a>
               <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FaXTwitter /><span>X / TWITTER</span></a>
-              <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer"><FiSend /><span>TELEGRAM</span></a>
+              <a href="https://www.linkedin.com/in/ia-lopez/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /><span>LINKEDIN</span></a>
             </div>
             <div className="hero-intro__stats">
               <div><strong>7+</strong><span>{language === "es" ? "AÑOS" : "YEARS"}</span></div>
@@ -215,7 +215,7 @@ const Header = ({ onLanguageChange, t }) => {
             <div className="mobile-menu__socials">
               <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FiGithub /> GitHub</a>
               <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FaXTwitter /> X</a>
-              <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer"><FiSend /> Telegram</a>
+              <a href="https://www.linkedin.com/in/ia-lopez/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /> LinkedIn</a>
             </div>
           </motion.div>
         )}

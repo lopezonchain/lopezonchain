@@ -87,7 +87,7 @@ const InterfaceLayer = ({ lang }) => {
   return (
     <>
       <div className="pointer-aura" aria-hidden="true" />
-      <div className="system-cursor" ref={cursorRef} aria-hidden="true"><span /></div>
+      <div className={`system-cursor system-cursor--${active}`} ref={cursorRef} aria-hidden="true"><span /></div>
       <div className="system-cursor-dot" ref={dotRef} aria-hidden="true" />
 
       <aside className={`system-rail system-rail--${active}`} aria-label={lang === "es" ? "Progreso de la página" : "Page progress"}>

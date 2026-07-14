@@ -2,10 +2,10 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiGithub, FiSend } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
-const Awards = ({ lang, t }) => {
+const Awards = ({ lang, onContactOpen, t }) => {
   const award = t.awards.list[0];
 
   return (
@@ -51,15 +51,15 @@ const Awards = ({ lang, t }) => {
           <span>MADRID / WORLDWIDE</span>
         </div>
         <h2>{lang === "es" ? "HAGAMOS ALGO" : "LET'S MAKE"}<br /><em>{lang === "es" ? "INCREÍBLE." : "SOMETHING GREAT."}</em></h2>
-        <a className="footer-cta" href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer">
+        <button type="button" className="footer-cta" onClick={onContactOpen}>
           <span>{lang === "es" ? "INICIAR UNA CONVERSACIÓN" : "START A CONVERSATION"}</span><FiArrowUpRight />
-        </a>
+        </button>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} LOPEZ SOFTWARE</span>
           <div>
             <a href="https://github.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FiGithub /> GITHUB</a>
             <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FaXTwitter /> X</a>
-            <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer"><FiSend /> TELEGRAM</a>
+            <a href="https://www.linkedin.com/in/ia-lopez/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /> LINKEDIN</a>
           </div>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>BACK TO TOP ↑</button>
         </div>

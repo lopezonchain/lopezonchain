@@ -10,6 +10,7 @@ import WorkHistory from "../components/WorkHistory";
 import Awards from "../components/Awards";
 import BackgroundParticles from "../components/BackgroundParticles";
 import InterfaceLayer from "../components/InterfaceLayer";
+import ContactModal from "../components/ContactModal";
 import en from "../locales/en";
 import es from "../locales/es";
 
@@ -17,6 +18,7 @@ export default function Home() {
   const [language, setLanguage] = useState("en");
   const [showScroll, setShowScroll] = useState(false);
   const [activeSection, setActiveSection] = useState("top");
+  const [contactOpen, setContactOpen] = useState(false);
   const t = language === "en" ? en : es;
 
   useEffect(() => {
@@ -44,13 +46,14 @@ export default function Home() {
     <div className="site-shell">
       <BackgroundParticles />
       <InterfaceLayer lang={language} />
-      <Header onLanguageChange={setLanguage} t={t} />
+      <Header onLanguageChange={setLanguage} onContactOpen={() => setContactOpen(true)} t={t} />
       <main>
         <About lang={language} t={t} />
         <Projects lang={language} t={t} />
         <WorkHistory lang={language} t={t} />
-        <Awards lang={language} t={t} />
+        <Awards lang={language} onContactOpen={() => setContactOpen(true)} t={t} />
       </main>
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} lang={language} />
 
       <AnimatePresence>
         {showScroll && (
