@@ -37,6 +37,7 @@ const tickerItems = [
 ];
 
 const Header = ({ onLanguageChange, onContactOpen, t }) => {
+  const ui = t.ui;
   const [language, setLanguage] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -128,14 +129,14 @@ const Header = ({ onLanguageChange, onContactOpen, t }) => {
           <div className="hero-manifesto">
             <div className="eyebrow">
               <span className="availability-dot" />
-              {language === "es" ? "Disponible para proyectos ambiciosos" : "Available for ambitious projects"}
+              {ui.available}
             </div>
             <h1>
               <span>SOFTWARE</span>
               <span>BLOCKCHAIN</span>
-              <span className="hero-manifesto__accent">{language === "es" ? "AGENTES IA" : "AI AGENTS"}</span>
+              <span className="hero-manifesto__accent">{ui.agents}</span>
             </h1>
-            <div className="hero-manifesto__foot"><span>01/03</span><span>{language === "es" ? "BUILDER & ARQUITECTO DE SOFTWARE" : "SOFTWARE BUILDER & ARCHITECT"}</span></div>
+            <div className="hero-manifesto__foot"><span>01/03</span><span>{ui.builderArchitect}</span></div>
           </div>
 
           <div className="identity-core">
@@ -163,10 +164,10 @@ const Header = ({ onLanguageChange, onContactOpen, t }) => {
             <p>{t.header.description}</p>
             <div className="hero-ctas">
               <a href="#projects" className="primary-cta" onClick={(e) => goTo(e, "#projects")}>
-                {language === "es" ? "Entrar al sistema" : "Enter the system"}<FiArrowDownRight />
+                {ui.enterSystem}<FiArrowDownRight />
               </a>
               <button type="button" onClick={onContactOpen} className="text-cta">
-                {language === "es" ? "Abrir canal" : "Open channel"}<FiSend />
+                {ui.openChannel}<FiSend />
               </button>
             </div>
             <div className="hero-socials" aria-label="Social links">

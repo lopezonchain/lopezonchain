@@ -1,4 +1,14 @@
 const es = {
+  ui: {
+    profile: "PERFIL", selectedWork: "TRABAJO SELECCIONADO", experience: "TRAYECTORIA", recognition: "RECONOCIMIENTO",
+    available: "Disponible para proyectos ambiciosos", agents: "AGENTES IA", builderArchitect: "BUILDER Y ARQUITECTO DE SOFTWARE",
+    enterSystem: "Entrar al sistema", openChannel: "Abrir canal", years: "AÑOS", award: "PREMIO", ideas: "IDEAS",
+    capabilities: "CAPACIDADES", fromIdea: "De la idea al sistema en producción.", buildProtocol: "PROTOCOLO DE CONSTRUCCIÓN",
+    buildSteps: ["ENTENDER", "DISEÑAR", "CONSTRUIR", "LANZAR"], codeIntent: "Código con criterio.", productsImpact: "Productos con impacto.", buildTogether: "Trabajemos juntos",
+    projectsHeading: "Construido para", realWorld: "el mundo real.", projectsIntro: "Productos que convierten tecnología compleja en experiencias simples, rápidas y memorables.", liveRender: "RENDER EN DIRECTO", visitProject: "Visitar proyecto", previous: "Proyecto anterior", next: "Siguiente proyecto",
+    yearsBuilding: "AÑOS CREANDO", visitCompany: "Visitar empresa", awardProject: "Ver proyecto premiado", haveIdea: "¿TIENES UNA IDEA?", letsMake: "HAGAMOS ALGO", somethingGreat: "INCREÍBLE.", startConversation: "INICIAR UNA CONVERSACIÓN", backTop: "VOLVER ARRIBA ↑", pageProgress: "Progreso de la página", section: "Sección",
+    contactChannel: "CANAL DE CONTACTO", chooseHow: "Elige cómo", weStart: "empezamos.", contactIntro: "Cuéntame qué quieres construir y encontraremos el canal adecuado.", sendMessage: "ENVIAR MENSAJE", copied: "COPIADO", telegramNote: "Rápido, directo, informal", emailNote: "Propuestas, detalles, proyectos", usuallyReplies: "RESPUESTA HABITUAL EN 24H", close: "Cerrar", openMenu: "Abrir menú", closeMenu: "Cerrar", specialties: "Especialidades"
+  },
   header: {
     description: "Software Builder y arquitecto especializado en productos full-stack, infraestructura blockchain y sistemas de agentes de IA. Convierto tecnología compleja en productos sólidos, cuidados y preparados para producción.",
     stats: [

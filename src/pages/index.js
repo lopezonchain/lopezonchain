@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="site-shell">
       <BackgroundParticles />
-      <InterfaceLayer lang={language} />
+      <InterfaceLayer lang={language} t={t} />
       <Header onLanguageChange={setLanguage} onContactOpen={() => setContactOpen(true)} t={t} />
       <main>
         <About lang={language} t={t} />
@@ -53,7 +53,7 @@ export default function Home() {
         <WorkHistory lang={language} t={t} />
         <Awards lang={language} onContactOpen={() => setContactOpen(true)} t={t} />
       </main>
-      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} lang={language} />
+      <ContactModal open={contactOpen} onClose={() => setContactOpen(false)} lang={language} t={t} />
 
       <AnimatePresence>
         {showScroll && (

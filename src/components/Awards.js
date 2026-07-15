@@ -7,6 +7,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Awards = ({ lang, onContactOpen, t }) => {
   const award = t.awards.list[0];
+  const ui = t.ui;
 
   return (
     <>
@@ -14,7 +15,7 @@ const Awards = ({ lang, onContactOpen, t }) => {
         <div className="award-section__burst" aria-hidden="true">
           {Array.from({ length: 18 }).map((_, index) => <span key={index} style={{ transform: `rotate(${index * 20}deg)` }} />)}
         </div>
-        <div className="section-label section-label--dark"><span>04</span> {lang === "es" ? "RECONOCIMIENTO" : "RECOGNITION"}</div>
+        <div className="section-label section-label--dark"><span>04</span> {ui.recognition}</div>
 
         <motion.div
           className="award-layout"
@@ -33,7 +34,7 @@ const Awards = ({ lang, onContactOpen, t }) => {
             <h2>{award.title}</h2>
             <p>{award.description}</p>
             <a href={award.link} target="_blank" rel="noopener noreferrer">
-              {lang === "es" ? "Ver proyecto premiado" : "View winning project"}<FiArrowUpRight />
+              {ui.awardProject}<FiArrowUpRight />
             </a>
           </div>
           <a className="award-visual" href={award.link} target="_blank" rel="noopener noreferrer" aria-label={award.title}>
@@ -47,12 +48,12 @@ const Awards = ({ lang, onContactOpen, t }) => {
 
       <footer className="site-footer">
         <div className="footer-topline">
-          <span>{lang === "es" ? "¿TIENES UNA IDEA?" : "HAVE AN IDEA?"}</span>
+          <span>{ui.haveIdea}</span>
           <span>MADRID / WORLDWIDE</span>
         </div>
-        <h2>{lang === "es" ? "HAGAMOS ALGO" : "LET'S MAKE"}<br /><em>{lang === "es" ? "INCREÍBLE." : "SOMETHING GREAT."}</em></h2>
+        <h2>{ui.letsMake}<br /><em>{ui.somethingGreat}</em></h2>
         <button type="button" className="footer-cta" onClick={onContactOpen}>
-          <span>{lang === "es" ? "INICIAR UNA CONVERSACIÓN" : "START A CONVERSATION"}</span><FiArrowUpRight />
+          <span>{ui.startConversation}</span><FiArrowUpRight />
         </button>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} LOPEZ SOFTWARE</span>
@@ -61,7 +62,7 @@ const Awards = ({ lang, onContactOpen, t }) => {
             <a href="https://x.com/lopezonchain" target="_blank" rel="noopener noreferrer"><FaXTwitter /> X</a>
             <a href="https://www.linkedin.com/in/ia-lopez/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /> LINKEDIN</a>
           </div>
-          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>BACK TO TOP ↑</button>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>{ui.backTop}</button>
         </div>
       </footer>
     </>

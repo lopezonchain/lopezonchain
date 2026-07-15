@@ -7,6 +7,7 @@ import { FiArrowLeft, FiArrowRight, FiArrowUpRight } from "react-icons/fi";
 
 const Projects = ({ lang, t }) => {
   const projects = t.projects.list;
+  const ui = t.ui;
   const [activeIndex, setActiveIndex] = useState(0);
   const active = projects[activeIndex];
 
@@ -16,18 +17,18 @@ const Projects = ({ lang, t }) => {
 
   return (
     <section id="projects" className="section projects-section">
-      <div className="section-label section-label--dark"><span>02</span> {lang === "es" ? "TRABAJO SELECCIONADO" : "SELECTED WORK"}</div>
+      <div className="section-label section-label--dark"><span>02</span> {ui.selectedWork}</div>
 
       <div className="projects-heading">
-        <h2>{lang === "es" ? "Construido para" : "Built for the"}<br /><em>{lang === "es" ? "el mundo real." : "real world."}</em></h2>
-        <p>{lang === "es" ? "Productos que convierten tecnología compleja en experiencias simples, rápidas y memorables." : "Products that turn complex technology into simple, fast and memorable experiences."}</p>
+        <h2>{ui.projectsHeading}<br /><em>{ui.realWorld}</em></h2>
+        <p>{ui.projectsIntro}</p>
       </div>
 
       <div className="project-stage">
         <div className="project-stage__chrome">
           <span className="window-dots"><i /><i /><i /></span>
           <span>/LOPEZ.OS/WORK/{active.title.replace(/\s+/g, "_").toUpperCase()}</span>
-          <span><i className="live-pixel" /> LIVE RENDER</span>
+          <span><i className="live-pixel" /> {ui.liveRender}</span>
         </div>
         <div className="project-stage__visual">
           <AnimatePresence mode="wait">
@@ -67,7 +68,7 @@ const Projects = ({ lang, t }) => {
               <p>{active.description}</p>
               {active.visitUrl && (
                 <a href={active.visitUrl} target="_blank" rel="noopener noreferrer">
-                  {t.projects.visitButtonText || (lang === "es" ? "Visitar" : "Visit project")}<FiArrowUpRight />
+                  {ui.visitProject}<FiArrowUpRight />
                 </a>
               )}
             </motion.div>
@@ -82,8 +83,8 @@ const Projects = ({ lang, t }) => {
               ))}
             </div>
             <div className="project-arrows">
-              <button onClick={() => move(-1)} aria-label="Previous project"><FiArrowLeft /></button>
-              <button onClick={() => move(1)} aria-label="Next project"><FiArrowRight /></button>
+              <button onClick={() => move(-1)} aria-label={ui.previous}><FiArrowLeft /></button>
+              <button onClick={() => move(1)} aria-label={ui.next}><FiArrowRight /></button>
             </div>
           </div>
         </div>

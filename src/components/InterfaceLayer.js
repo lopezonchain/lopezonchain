@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const sections = ["top", "about", "projects", "work", "awards"];
 
-const InterfaceLayer = ({ lang }) => {
+const InterfaceLayer = ({ lang, t }) => {
   const cursorRef = useRef(null);
   const dotRef = useRef(null);
   const [active, setActive] = useState("top");
@@ -90,7 +90,7 @@ const InterfaceLayer = ({ lang }) => {
       <div className={`system-cursor system-cursor--${active}`} ref={cursorRef} aria-hidden="true"><span /></div>
       <div className="system-cursor-dot" ref={dotRef} aria-hidden="true" />
 
-      <aside className={`system-rail system-rail--${active}`} aria-label={lang === "es" ? "Progreso de la página" : "Page progress"}>
+      <aside className={`system-rail system-rail--${active}`} aria-label={t.ui.pageProgress}>
         <span className="system-rail__word">LOPEZ.OS</span>
         <nav>
           {sections.map((id, index) => (

@@ -7,11 +7,12 @@ import { FiArrowUpRight, FiChevronDown, FiMapPin } from "react-icons/fi";
 
 const WorkHistory = ({ lang, t }) => {
   const history = t.workHistory.list;
+  const ui = t.ui;
   const [expandedId, setExpandedId] = useState(history[0]?.id ?? null);
 
   return (
     <section id="work" className="section experience-section">
-      <div className="section-label"><span>03</span> {lang === "es" ? "TRAYECTORIA" : "EXPERIENCE"}</div>
+      <div className="section-label"><span>03</span> {ui.experience}</div>
 
       <div className="experience-layout">
         <div className="experience-heading">
@@ -21,7 +22,7 @@ const WorkHistory = ({ lang, t }) => {
           </motion.div>
           <div className="experience-counter">
             <strong>7+</strong>
-            <span>{lang === "es" ? "AÑOS CREANDO" : "YEARS BUILDING"}</span>
+            <span>{ui.yearsBuilding}</span>
           </div>
         </div>
 
@@ -67,7 +68,7 @@ const WorkHistory = ({ lang, t }) => {
                           <ul>{item.highlights.slice(0, 5).map((highlight) => <li key={highlight}>{highlight}</li>)}</ul>
                         )}
                         <div className="experience-tags">{item.tags?.map((tag) => <span key={tag}>{tag}</span>)}</div>
-                        {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">{lang === "es" ? "Visitar empresa" : "Visit company"}<FiArrowUpRight /></a>}
+                        {item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">{ui.visitCompany}<FiArrowUpRight /></a>}
                       </div>
                     </motion.div>
                   )}

@@ -1,4 +1,14 @@
 const en = {
+  ui: {
+    profile: "PROFILE", selectedWork: "SELECTED WORK", experience: "EXPERIENCE", recognition: "RECOGNITION",
+    available: "Available for ambitious projects", agents: "AI AGENTS", builderArchitect: "SOFTWARE BUILDER & ARCHITECT",
+    enterSystem: "Enter the system", openChannel: "Open channel", years: "YEARS", award: "AWARD", ideas: "IDEAS",
+    capabilities: "CAPABILITIES", fromIdea: "From first idea to production system.", buildProtocol: "BUILD PROTOCOL",
+    buildSteps: ["UNDERSTAND", "DESIGN", "BUILD", "SHIP"], codeIntent: "Code with intent.", productsImpact: "Products with impact.", buildTogether: "Let's build together",
+    projectsHeading: "Built for", realWorld: "real world.", projectsIntro: "Products that turn complex technology into simple, fast and memorable experiences.", liveRender: "LIVE RENDER", visitProject: "Visit project", previous: "Previous project", next: "Next project",
+    yearsBuilding: "YEARS BUILDING", visitCompany: "Visit company", awardProject: "View winning project", haveIdea: "HAVE AN IDEA?", letsMake: "LET'S MAKE", somethingGreat: "SOMETHING GREAT.", startConversation: "START A CONVERSATION", backTop: "BACK TO TOP ↑", pageProgress: "Page progress", section: "Section",
+    contactChannel: "CONTACT CHANNEL", chooseHow: "Choose how", weStart: "we start.", contactIntro: "Tell me what you want to build and we will use the right channel to move it forward.", sendMessage: "SEND MESSAGE", copied: "COPIED", telegramNote: "Fast, direct, informal", emailNote: "Proposals, details, projects", usuallyReplies: "USUALLY REPLIES WITHIN 24H", close: "Close", openMenu: "Open menu", closeMenu: "Close", specialties: "Specialties"
+  },
   header: {
     description: "Software Builder and architect specializing in full-stack products, blockchain infrastructure and AI agent systems. I turn complex technology into polished, reliable, production-ready products.",
     stats: [

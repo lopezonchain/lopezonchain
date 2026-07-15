@@ -19,6 +19,7 @@ const Reveal = ({ children, className = "", delay = 0 }) => (
 
 const About = ({ lang, t }) => {
   const skills = t.skills?.categories || [];
+  const ui = t.ui;
   const principles = [
     { number: "01", title: t.about.experience_title, copy: t.about.experience },
     { number: "02", title: t.about.passion_title, copy: t.about.passion },
@@ -27,19 +28,18 @@ const About = ({ lang, t }) => {
 
   return (
     <section id="about" className="section about-section">
-      <div className="section-label"><span>01</span> {lang === "es" ? "PERFIL" : "PROFILE"}</div>
+      <div className="section-label"><span>01</span> {ui.profile}</div>
 
       <div className="about-intro">
         <Reveal>
           <h2>
-            {lang === "es" ? "Código con criterio." : "Code with intent."}<br />
-            <span>{lang === "es" ? "Productos con impacto." : "Products with impact."}</span>
+            {ui.codeIntent}<br /><span>{ui.productsImpact}</span>
           </h2>
         </Reveal>
         <Reveal className="about-intro__copy" delay={0.12}>
           <p>{t.about.description}</p>
           <a href="https://t.me/lopezdev" target="_blank" rel="noopener noreferrer">
-            {lang === "es" ? "Trabajemos juntos" : "Let's build together"}<FiArrowUpRight />
+            {ui.buildTogether}<FiArrowUpRight />
           </a>
         </Reveal>
       </div>
@@ -56,8 +56,7 @@ const About = ({ lang, t }) => {
 
       <Reveal className="capabilities" delay={0.1}>
         <div className="capabilities__heading">
-          <span>{lang === "es" ? "CAPACIDADES" : "CAPABILITIES"}</span>
-          <h3>{lang === "es" ? "De la idea al sistema en producción." : "From first idea to production system."}</h3>
+          <span>{ui.capabilities}</span><h3>{ui.fromIdea}</h3>
         </div>
 
         <div className="capabilities__grid">
@@ -85,9 +84,9 @@ const About = ({ lang, t }) => {
       </Reveal>
 
       <Reveal className="build-protocol">
-        <div className="build-protocol__label">{lang === "es" ? "PROTOCOLO DE CONSTRUCCIÓN" : "BUILD PROTOCOL"}</div>
+        <div className="build-protocol__label">{ui.buildProtocol}</div>
         <div className="build-protocol__flow">
-          {[lang === "es" ? "ENTENDER" : "UNDERSTAND", lang === "es" ? "DISEÑAR" : "DESIGN", lang === "es" ? "CONSTRUIR" : "BUILD", lang === "es" ? "LANZAR" : "SHIP"].map((step, index) => (
+          {ui.buildSteps.map((step, index) => (
             <div key={step}><span>0{index + 1}</span><strong>{step}</strong><i /></div>
           ))}
         </div>
