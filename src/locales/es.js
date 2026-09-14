@@ -69,7 +69,7 @@ const es = {
         id: 0,
         title: "KernScript",
         description: "Lenguaje de programación diseñado para reducir drásticamente el consumo de tokens al crear proyectos JavaScript y TypeScript con agentes de IA. Una sintaxis compacta que conserva la expresividad y acelera el desarrollo asistido.",
-        visitUrl: "https://x.com/KernScript",
+        visitUrl: "https://kernscript.com/es",
         image: "/assets/KernScript.png"
       },
       {

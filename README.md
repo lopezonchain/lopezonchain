@@ -48,6 +48,7 @@ Software architect and full stack developer with 7+ years of experience. Lately 
 
 | Project | Description |
 |---|---|
+| [**KernScript**](https://kernscript.com) | (Founder) Programming language built for AIs that compiles to JS/TS |
 | [**Indexy**](https://indexy.xyz) | (Software lead) Crypto index platform, Agent API, MCP server, Farcaster/Baseapp miniapp |
 | [**WarpPay**](https://warppay.lopezonchain.xyz) | (POC Creator) All-in-one payments miniapp for Farcaster |
 | [**PingGate**](https://pinggate.lopezonchain.xyz) | (POC Creator) Web3 chat marketplace integrated in Farcaster feed |

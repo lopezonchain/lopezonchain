@@ -68,8 +68,8 @@ const en = {
       {
         id: 0,
         title: "KernScript",
-        description: "A programming language designed to dramatically reduce token usage when AI agents create JavaScript and TypeScript projects. Compact syntax that preserves expressiveness and accelerates assisted software development.",
-        visitUrl: "https://x.com/KernScript",
+        description: "A programming language designed to reduce token usage when AI agents create JavaScript and TypeScript projects. Compact syntax that preserves expressiveness and accelerates assisted software development.",
+        visitUrl: "https://kernscript.com/en",
         image: "/assets/KernScript.png"
       },
       {
